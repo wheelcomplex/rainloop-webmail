@@ -102,6 +102,7 @@ bg_BG:
     BUTTON_BACK: "Назад"
     BUTTON_CLOSE: "Затвори"
     BUTTON_DELETE: "Изтрий"
+    BUTTON_UNSUBSCRIBE: "Отписване от този лист"
     BUTTON_ARCHIVE: "Архивирай"
     BUTTON_SPAM: "Спам"
     BUTTON_NOT_SPAM: "Не е спам"
@@ -144,19 +145,21 @@ bg_BG:
     PRINT_LABEL_ATTACHMENTS: "Прикрепени файлове"
     MESSAGE_LOADING: "Зареждане"
     MESSAGE_VIEW_DESC: "Изберете съобщение, за да го видите тук."
+    MESSAGE_VIEW_MOVE_DESC: "Изберете цел от папките в лявото поле"
     PGP_PASSWORD_INPUT_PLACEHOLDER: "Парола"
     PGP_SIGNED_MESSAGE_DESC: "Подписано с OpenPGP (кликни за проверка)"
     PGP_ENCRYPTED_MESSAGE_DESC: "Шифровано с OpenPGP (кликни за проверка)"
     LINK_DOWNLOAD_AS_ZIP: "Свали като ZIP файл"
     LINK_SAVE_TO_OWNCLOUD: "Запази в ownCloud"
+    LINK_SAVE_TO_CLOUD: "Запазване в облака"
     LINK_SAVE_TO_DROPBOX: "Запази в Dropbox"
   READ_RECEIPT:
     SUBJECT: "Обратна разписка (видяно) - %SUBJECT%"
     BODY: |
-      Това е обратна разписка за съобщението, което изпратихте до %READ-RECEIPT%.
+        Това е обратна разписка за съобщението, което изпратихте до %READ-RECEIPT%.
 
-      Note: Тази обратна разписка само указва, че съобщението е показано на компютъра на получателя.
-      Няма гаранция, че получателят е прочел или разбрал съдържанието на съобщението.
+        Note: Тази обратна разписка само указва, че съобщението е показано на компютъра на получателя.
+        Няма гаранция, че получателят е прочел или разбрал съдържанието на съобщението.
   SUGGESTIONS:
     SEARCHING_DESC: "Търсене..."
   CONTACTS:
@@ -316,7 +319,7 @@ bg_BG:
     FILTER_NAME: "Име"
     LEGEND_CONDITIONS: "Условия"
     LEGEND_ACTIONS: "Действия"
-    BUTTON_DONE: "Няма"
+    BUTTON_DONE: "Готово"
     BUTTON_ADD_CONDITION: "Добави условие"
     SELECT_ACTION_NONE: "Няма"
     SELECT_ACTION_MOVE_TO: "Премести в"
@@ -331,8 +334,8 @@ bg_BG:
     SELECT_FIELD_SIZE: "Размер"
     SELECT_TYPE_CONTAINS: "Съдържа"
     SELECT_TYPE_NOT_CONTAINS: "Не съдържа"
-    SELECT_TYPE_MATCHES: "Съвпада (поддържат се ? и *)"
-    SELECT_TYPE_NOT_MATCHES: "Не съвпада (поддържат се ? и *)"
+    SELECT_TYPE_MATCHES: "Съвпада с (поддържат се ? и *)"
+    SELECT_TYPE_NOT_MATCHES: "Не съвпада с (поддържат се ? и *)"
     SELECT_TYPE_REGEXP: "Регулярен израз"
     SELECT_TYPE_NOT_REGEXP: "Не регулярен израз"
     SELECT_TYPE_EQUAL_TO: "Равно на"
@@ -342,7 +345,7 @@ bg_BG:
     SELECT_MATCH_ANY: "Съвпада с КОЕТО И ДА Е правило от"
     SELECT_MATCH_ALL: "Съвпада с ВСИЧКИ правила от"
     MARK_AS_READ_LABEL: "Отбележи като прочетено"
-    REPLY_INTERVAL_LABEL: "Кога е отговорено (дни)"
+    REPLY_INTERVAL_LABEL: "За колко време (дни)"
     KEEP_LABEL: "Запази"
     STOP_LABEL: "Да не спира да обработва правилата"
     EMAIL_LABEL: "Email"
@@ -363,15 +366,15 @@ bg_BG:
     BUTTON_CANCEL: "Отказ"
     BUTTON_CLOSE: "Затвори"
     NOTIFICATION_SENT: |
-      Не сте избрали системна папка, в която изпратените съобщения "Изпратени" да бъдат съхранявани след изпращането им.
-      Ако нежелаете да запазвате изпратено съобщение, моля, изберете опцията "Не използвай".
+        Не сте избрали системна папка, в която изпратените съобщения "Изпратени" да бъдат съхранявани след изпращането им.
+        Ако нежелаете да запазвате изпратено съобщение, моля, изберете опцията "Не използвай".
     NOTIFICATION_DRAFTS: "Не сте избрали системна папка, в която съобщенията \"Чернови\" да бъдат съхранявани по време на съставянето на имейл."
     NOTIFICATION_SPAM: |
-      Не сте избрали системна папка, в която съобщенията "Спам" да бъдат поставяни.
-      Ако желаете да премахнете съобщенията окончателно, моля, изберете опцята "Не използвай".
+        Не сте избрали системна папка, в която съобщенията "Спам" да бъдат поставяни.
+        Ако желаете да премахнете съобщенията окончателно, моля, изберете опцята "Не използвай".
     NOTIFICATION_TRASH: |
-      Не сте избрали системна папка, в която изтритите съобщения "Отпадък" да бъдат поставяни.
-      Ако желаете да премахнете съобщенията окончателно, моля изберете опцията "Не използвай".
+        Не сте избрали системна папка, в която изтритите съобщения "Отпадък" да бъдат поставяни.
+        Ако желаете да премахнете съобщенията окончателно, моля изберете опцията "Не използвай".
     NOTIFICATION_ARCHIVE: "Не сте избрали истемна папка, в която архивираните съобщения \"Архив\" да бъдат поставяни."
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "Двустъпкова проверка"
@@ -393,12 +396,12 @@ bg_BG:
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Настроена"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Не е настроена"
     TWO_FACTOR_SECRET_DESC: >
-      Внесете тази информация във вашият Google Authenticator клиент (или друг TOTP
-      клиент) чрез предоставения QR код или чрез въвеждане на кода ръчно.
+        Внесете тази информация във вашият Google Authenticator клиент (или друг TOTP
+        клиент) чрез предоставения QR код или чрез въвеждане на кода ръчно.
     TWO_FACTOR_BACKUP_CODES_DESC: >
-      Ако не можете да получавате кодове от Google Authenticator (или друг TOTP клиент),
-      можете да използвате резервни кодове за влизане. След като използвате някой,
-      той става невалиден.
+        Ако не можете да получавате кодове от Google Authenticator (или друг TOTP
+        клиент), можете да използвате резервни кодове за влизане. След като използвате
+        някой, той става невалиден.
     TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "Не можете да промените настройките, преди да ги тествате."
   TITLES:
     LOADING: "Зареждане"
@@ -415,8 +418,8 @@ bg_BG:
     ERROR_FILE_TYPE: "Невалиден тип на файла"
     ERROR_UNKNOWN: "Възникна неизвестна грешка при качването на файла"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Обикновен текст"
-    TEXT_SWITCHER_RICH_FORMATTING: "Богат формат"
+    TEXT_SWITCHER_PLAINT_TEXT: "HTML <-> ТЕКСТ"
+    TEXT_SWITCHER_RICH_FORMATTING: "Форматиран текст"
     TEXT_SWITCHER_CONFIRM: "Форматирането и изображенията ще бъдат изгубени. Сигурни ли сте, че желаете да продължите?"
   SETTINGS_LABELS:
     LABEL_PERSONAL_NAME: "Лични"
@@ -448,7 +451,7 @@ bg_BG:
     SUBNAME_DISCARD: "Отхвърли"
     CAPABILITY_LABEL: "Способности"
     LOADING_PROCESS: "Обнови списъка с филтри"
-    DELETING_ASK: "Сигурен ли си?"
+    DELETING_ASK: "Сигурни ли си?"
     CHACHES_NEED_TO_BE_SAVED_DESC: "Промените трябва да се запаметят на сървъра."
   SETTINGS_IDENTITY:
     LEGEND_IDENTITY: "Идентичност"
@@ -458,10 +461,11 @@ bg_BG:
     LABEL_ADD_SIGNATURE_TO_ALL: "Добави подпис към всички изходящи съобщения"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Сигурност"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Конфигурирай двустъпкова проверка"
+    LABEL_CONFIGURE_TWO_FACTOR: "Конфигурирай двустъпкова проверка"
     LABEL_AUTOLOGOUT: "Автоматично излизане"
     AUTOLOGIN_NEVER_OPTION_NAME: "Никога"
     AUTOLOGIN_MINUTES_OPTION_NAME: "%MINUTES% минута(и)"
+    AUTOLOGIN_HOURS_OPTION_NAME: "%HOURS% час(а)"
   SETTINGS_GENERAL:
     LEGEND_GENERAL: "Общи"
     LABEL_LANGUAGE: "Език"
@@ -471,10 +475,10 @@ bg_BG:
     LABEL_LAYOUT_VERTICAL_SPLIT: "Вертикално разделяне"
     LABEL_LAYOUT_HORIZONTAL_SPLIT: "Хоризонтално разделяне"
     LABEL_EDITOR: "Текстов редактор по подразбиране"
-    LABEL_EDITOR_HTML: "Html"
-    LABEL_EDITOR_PLAIN: "Обикновен"
-    LABEL_EDITOR_HTML_FORCED: "Html (задължително)"
-    LABEL_EDITOR_PLAIN_FORCED: "Plain (задължително)"
+    LABEL_EDITOR_HTML: "HTML"
+    LABEL_EDITOR_PLAIN: "Чист текст"
+    LABEL_EDITOR_HTML_FORCED: "HTML (задължително)"
+    LABEL_EDITOR_PLAIN_FORCED: "Чист текст (задължително)"
     LABEL_ANIMATION: "Анимация в интерфейса"
     LABEL_ANIMATION_FULL: "Пълна"
     LABEL_ANIMATION_NORMAL: "Нормална"
@@ -527,7 +531,7 @@ bg_BG:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Списък с папки"
     BUTTON_CREATE: "Създай папка"
-    BUTTON_SYSTEM: "Избери системни папки"
+    BUTTON_SYSTEM: "Системни папки"
     BUTTON_DELETE: "Изтриване"
     BUTTON_SUBSCRIBE: "Абонирай се"
     BUTTON_UNSUBSCRIBE: "Отписване"
@@ -578,6 +582,7 @@ bg_BG:
     TITLE_PUBLIC: "Публичен"
     DELETING_ASK: "Сигурни ли сте?"
     GENERATE_ONLY_HTTPS: "Само през HTTPS"
+    LABEL_ALLOW_DRAFT_AUTOSAVE: "Автоматично запазване на чернова"
   SHORTCUTS_HELP:
     LEGEND_SHORTCUTS_HELP: "Помощ за клавишните комбинации"
     TAB_MAILBOX: "Пощенска кутия"
@@ -638,14 +643,14 @@ bg_BG:
     CONNECTION_ERROR: "Не може да се свърже със сървъра"
     CAPTCHA_ERROR: "Некорекно въведена CAPTCHA."
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >
-      Това социално ID не е присвоено към никой email акаунт. Влезте чрез email-а
-      и пуснете тази опция чрез Настройки.
+        Това социално ID не е присвоено към никой email акаунт. Влезте чрез email-а
+        и пуснете тази опция чрез Настройки.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >
-      Това социално ID не е присвоено към никой email акаунт. Влезте чрез email-а
-      и пуснете тази опция чрез Настройки.
+        Това социално ID не е присвоено към никой email акаунт. Влезте чрез email-а
+        и пуснете тази опция чрез Настройки.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >
-      Това социално ID не е присвоено към никой email акаунт. Влезте чрез email-а
-      и пуснете тази опция чрез Настройки.
+        Това социално ID не е присвоено към никой email акаунт. Влезте чрез email-а
+        и пуснете тази опция чрез Настройки.
     DOMAIN_NOT_ALLOWED: "Този домейн не е разрешен"
     ACCOUNT_NOT_ALLOWED: "Този акаунт не е разрешен"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "Задължителна е двустъпкова проверка"
@@ -696,13 +701,13 @@ bg_BG:
     PHP_VERSION_ERROR_DESC: "Вашата персия на PHP (%VERSION%) е по-стара от минималната 5.3.0!"
     NO_SCRIPT_TITLE: "За това приложение е необходим JavaScript."
     NO_SCRIPT_DESC: |
-      Поддръжката на JavaScript не е налична във вашия браузър.
-      Моля, разрешете поддръжката на JavaScript в настройките на вашия браузър и опитайте отново.
+        Поддръжката на JavaScript не е налична във вашия браузър.
+        Моля, разрешете поддръжката на JavaScript в настройките на вашия браузър и опитайте отново.
     NO_COOKIE_TITLE: "За това приложение е необходимо да се поддъжат Бисквитки."
     NO_COOKIE_DESC: |
-      Поддръжката на Бисквитки не е налична във вашия браузър.
-      Моля, разрешете поддръжката на Бисквитки в настройките на вашия браузър и опитайте отново.
+        Поддръжката на Бисквитки не е налична във вашия браузър.
+        Моля, разрешете поддръжката на Бисквитки в настройките на вашия браузър и опитайте отново.
     BAD_BROWSER_TITLE: "Вашият браузър е остарял."
     BAD_BROWSER_DESC: |
-      За да използвате всички функции на приложението,
-      изтеглете и инсталирайте един от тези браузъри:
+        За да използвате всички функции на приложението,
+        изтеглете и инсталирайте един от тези браузъри:

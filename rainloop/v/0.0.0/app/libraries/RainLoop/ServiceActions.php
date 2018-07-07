@@ -731,7 +731,7 @@ class ServiceActions
 					include_once APP_VERSION_ROOT_PATH.'app/libraries/lessphp/ctype.php';
 					include_once APP_VERSION_ROOT_PATH.'app/libraries/lessphp/lessc.inc.php';
 
-					$oLess = new \lessc();
+					$oLess = new \RainLoopVendor\lessc();
 					$oLess->setFormatter('compressed');
 
 					$aResult = array();
@@ -829,9 +829,9 @@ class ServiceActions
 	/**
 	 * @return string
 	 */
-	public function ServiceSkipMobile()
+	public function ServiceMobileVersion()
 	{
-		\RainLoop\Utils::SetCookie(\RainLoop\Actions::RL_SKIP_MOBILE_KEY, 1);
+		\RainLoop\Utils::SetCookie(\RainLoop\Actions::RL_MOBILE_TYPE, 'mobile');
 		$this->oActions->Location('./');
 		return '';
 	}
@@ -839,9 +839,9 @@ class ServiceActions
 	/**
 	 * @return string
 	 */
-	public function ServiceClearSkipMobile()
+	public function ServiceDesktopVersion()
 	{
-		\RainLoop\Utils::ClearCookie(\RainLoop\Actions::RL_SKIP_MOBILE_KEY);
+		\RainLoop\Utils::SetCookie(\RainLoop\Actions::RL_MOBILE_TYPE, 'desktop');
 		$this->oActions->Location('./');
 		return '';
 	}
@@ -1155,10 +1155,7 @@ class ServiceActions
 		return $sResult;
 	}
 
-	/**
-	 * @return string
-	 */
-	public function ServiceChange()
+	private function changeAction()
 	{
 		$this->oHttp->ServerNoCache();
 
@@ -1184,7 +1181,14 @@ class ServiceActions
 				$this->oActions->AuthToken($oAccountToLogin);
 			}
 		}
+	}
 
+	/**
+	 * @return string
+	 */
+	public function ServiceChange()
+	{
+		$this->changeAction();
 		$this->oActions->Location('./');
 		return '';
 	}
@@ -1310,7 +1314,7 @@ class ServiceActions
 	private function convertLanguageNameToMomentLanguageName($sLanguage)
 	{
 		$aHelper = array('en_gb' => 'en-gb', 'fr_ca' => 'fr-ca', 'pt_br' => 'pt-br',
-			'uk_ua' => 'ua', 'zh_cn' => 'zh-cn', 'zh_tw' => 'zh-tw');
+			'uk_ua' => 'ua', 'zh_cn' => 'zh-cn', 'zh_tw' => 'zh-tw', 'fa_ir' => 'fa');
 
 		return isset($aHelper[$sLanguage]) ? $aHelper[$sLanguage] : \substr($sLanguage, 0, 2);
 	}
@@ -1326,7 +1330,7 @@ class ServiceActions
 	{
 		$aResultLang = array();
 
-		$sMoment = 'window.moment && window.moment.lang && window.moment.lang(\'en\');';
+		$sMoment = 'window.moment && window.moment.locale && window.moment.locale(\'en\');';
 		$sMomentFileName = APP_VERSION_ROOT_PATH.'app/localization/moment/'.
 			$this->convertLanguageNameToMomentLanguageName($sLanguage).'.js';
 

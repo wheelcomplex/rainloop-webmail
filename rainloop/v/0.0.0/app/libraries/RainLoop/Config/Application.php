@@ -159,7 +159,9 @@ class Application extends \RainLoop\Config\AbstractConfig
 			),
 
 			'interface' => array(
-				'show_attachment_thumbnail' => array(true, '')
+				'show_attachment_thumbnail' => array(true, ''),
+				'use_native_scrollbars' => array(false),
+				'new_move_to_folder_button' => array(true)
 			),
 
 			'branding' => array(
@@ -181,7 +183,6 @@ class Application extends \RainLoop\Config\AbstractConfig
 
 			'contacts' => array(
 				'enable'			=> array(false, 'Enable contacts'),
-				'allow_sharing'		=> array(true),
 				'allow_sync'		=> array(false),
 				'sync_interval'		=> array(20),
 				'type'				=> array('sqlite', ''),
@@ -199,14 +200,13 @@ class Application extends \RainLoop\Config\AbstractConfig
 				'x_frame_options_header'	=> array(''),
 
 				'openpgp'					=> array(false),
-				'openpgp_public_key_server' => array(''),
 
-				'use_rsa_encryption'		=> array(false),
 				'admin_login'				=> array('admin', 'Login and password for web admin panel'),
 				'admin_password'			=> array('12345'),
 				'allow_admin_panel'			=> array(true, 'Access settings'),
 				'allow_two_factor_auth'		=> array(false),
 				'force_two_factor_auth'		=> array(false),
+				'hide_x_mailer_header'		=> array(false),
 				'admin_panel_host'			=> array(''),
 				'admin_panel_key'			=> array('admin'),
 				'content_security_policy'	=> array(''),
@@ -250,8 +250,12 @@ class Application extends \RainLoop\Config\AbstractConfig
 
 				'welcome_page' => array(false, ''),
 
+				'hide_submit_button' => array(true),
+
 				'forgot_password_link_url' => array('', ''),
 				'registration_link_url' => array('', ''),
+
+				'login_lowercase' => array(true, ''),
 
 				'sign_me_auto'	=> array(\RainLoop\Enumerations\SignMeType::DEFAILT_OFF,
 					'This option allows webmail to remember the logged in user
@@ -276,6 +280,7 @@ Values:
 				'show_images'			=> array(false),
 				'contacts_autosave'		=> array(true),
 				'mail_use_threads'		=> array(false),
+				'allow_draft_autosave'	=> array(true),
 				'mail_reply_same_folder' => array(false)
 			),
 
@@ -290,7 +295,7 @@ Values:
 				'hide_passwords' => array(true, 'Required for development purposes only.
 Disabling this option is not recommended.'),
 
-				'time_offset' => array(0),
+				'time_offset' => array('0'),
 				'session_filter' => array(''),
 
 				'filename' => array('log-{date:Y-m-d}.txt',
@@ -364,6 +369,8 @@ Enables caching in the system'),
 				'fast_cache_index' => array('v1', 'Additional caching key. If changed, fast cache is purged'),
 
 				'http' => array(true, 'Browser-level cache. If enabled, caching is maintainted without using files'),
+				'http_expires' => array(3600, 'Browser-level cache time (seconds, Expires header)'),
+
 				'server_uids' => array(true, 'Caching message UIDs when searching and sorting (threading)')
 			),
 
@@ -378,7 +385,7 @@ Enables caching in the system'),
 				'allow_prefetch' => array(true),
 				'allow_smart_html_links' => array(true),
 				'cache_system_data' => array(true),
-				'date_from_headers' => array(false),
+				'date_from_headers' => array(true),
 				'autocreate_system_folders' => array(true),
 				'allow_message_append' => array(false),
 				'disable_iconv_if_mbstring_supported' => array(false),
@@ -386,18 +393,17 @@ Enables caching in the system'),
 				'log_ajax_response_write_limit' => array(300),
 				'allow_html_editor_source_button' => array(false),
 				'allow_html_editor_biti_buttons' => array(false),
-				'allow_ctrl_enter_on_compose' => array(false),
+				'allow_ctrl_enter_on_compose' => array(true),
 				'try_to_detect_hidden_images' => array(false),
 				'hide_dangerous_actions' => array(false),
 				'use_app_debug_js' => array(false),
+				'use_mobile_version_for_tablets' => array(false),
 				'use_app_debug_css' => array(false),
 				'use_imap_sort' => array(true),
 				'use_imap_force_selection' => array(false),
 				'use_imap_list_subscribe' => array(true),
 				'use_imap_thread' => array(true),
 				'use_imap_move' => array(false),
-				'use_imap_auth_plain' => array(false),
-				'use_imap_auth_cram_md5' => array(false),
 				'use_imap_expunge_all_on_delete' => array(false),
 				'imap_forwarded_flag' => array('$Forwarded'),
 				'imap_read_receipt_flag' => array('$ReadReceipt'),
@@ -410,17 +416,25 @@ Enables caching in the system'),
 				'imap_large_thread_limit' => array(50),
 				'imap_folder_list_limit' => array(200),
 				'imap_show_login_alert' => array(true),
+				'imap_use_auth_plain' => array(true),
+				'imap_use_auth_cram_md5' => array(false),
 				'smtp_show_server_errors' => array(false),
+				'smtp_use_auth_plain' => array(true),
+				'smtp_use_auth_cram_md5' => array(false),
 				'sieve_allow_raw_script' => array(false),
 				'sieve_utf8_folder_name' => array(true),
+				'sieve_auth_plain_initial' => array(true),
+				'sieve_allow_fileinto_inbox' => array(false),
 				'imap_timeout' => array(300),
 				'smtp_timeout' => array(60),
 				'sieve_timeout' => array(10),
+				'domain_list_limit' => array(99),
 				'mail_func_clear_headers' => array(true),
 				'mail_func_additional_parameters' => array(false),
 				'favicon_status' => array(true),
 				'folders_spec_limit' => array(50),
 				'owncloud_save_folder' => array('Attachments'),
+				'owncloud_suggestions' => array(true),
 				'curl_proxy' => array(''),
 				'curl_proxy_auth' => array(''),
 				'in_iframe' => array(false),
@@ -439,9 +453,11 @@ Enables caching in the system'),
 				'detect_image_exif_orientation' => array(true),
 				'cookie_default_path' => array(''),
 				'cookie_default_secure' => array(false),
+				'check_new_messages' => array(true),
 				'replace_env_in_configuration' => array(''),
 				'startup_url' => array(''),
-				'emogrifier' => array(true),
+				'strict_html_parser' => array(false),
+				'allow_cmd' => array(false),
 				'dev_email' => array(''),
 				'dev_password' => array('')
 			),

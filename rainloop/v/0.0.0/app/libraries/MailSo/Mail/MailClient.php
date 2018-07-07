@@ -77,8 +77,8 @@ class MailClient
 	 * @param string $sLogin
 	 * @param string $sPassword
 	 * @param string $sProxyAuthUser = ''
-	 * @param bool $bUseAuthPlainIfSupported = false
-	 * @param bool $bUseAuthCramMd5IfSupported = false
+	 * @param bool $bUseAuthPlainIfSupported = true
+	 * @param bool $bUseAuthCramMd5IfSupported = true
 	 *
 	 * @return \MailSo\Mail\MailClient
 	 *
@@ -87,7 +87,7 @@ class MailClient
 	 * @throws \MailSo\Imap\Exceptions\LoginException
 	 */
 	public function Login($sLogin, $sPassword, $sProxyAuthUser = '',
-		$bUseAuthPlainIfSupported = false, $bUseAuthCramMd5IfSupported = false)
+		$bUseAuthPlainIfSupported = true, $bUseAuthCramMd5IfSupported = true)
 	{
 		$this->oImapClient->Login($sLogin, $sPassword, $sProxyAuthUser, $bUseAuthPlainIfSupported, $bUseAuthCramMd5IfSupported);
 		return $this;
@@ -172,7 +172,8 @@ class MailClient
 			\MailSo\Mime\Enumerations\Header::REPLY_TO,
 			\MailSo\Mime\Enumerations\Header::DATE,
 			\MailSo\Mime\Enumerations\Header::SUBJECT,
-			\MailSo\Mime\Enumerations\Header::CONTENT_TYPE
+			\MailSo\Mime\Enumerations\Header::CONTENT_TYPE,
+			\MailSo\Mime\Enumerations\Header::LIST_UNSUBSCRIBE,
 		), true);
 	}
 
@@ -213,6 +214,7 @@ class MailClient
 			\MailSo\Mime\Enumerations\Header::X_CONFIRM_READING_TO,
 			\MailSo\Mime\Enumerations\Header::AUTHENTICATION_RESULTS,
 			\MailSo\Mime\Enumerations\Header::X_DKIM_AUTHENTICATION_RESULTS,
+			\MailSo\Mime\Enumerations\Header::LIST_UNSUBSCRIBE,
 		), true);
 //
 //		return \MailSo\Imap\Enumerations\FetchType::ENVELOPE;
@@ -223,13 +225,14 @@ class MailClient
 	 * @param string $sMessageFlag
 	 * @param bool $bSetAction = true
 	 * @param bool $sSkipUnsupportedFlag = false
+	 * @param array $aCustomUids = null
 	 *
 	 * @throws \MailSo\Base\Exceptions\InvalidArgumentException
 	 * @throws \MailSo\Net\Exceptions\Exception
 	 * @throws \MailSo\Imap\Exceptions\Exception
 	 * @throws \MailSo\Mail\Exceptions\Exception
 	 */
-	public function MessageSetFlagToAll($sFolderName, $sMessageFlag, $bSetAction = true, $sSkipUnsupportedFlag = false)
+	public function MessageSetFlagToAll($sFolderName, $sMessageFlag, $bSetAction = true, $sSkipUnsupportedFlag = false, $aCustomUids = null)
 	{
 		$this->oImapClient->FolderSelect($sFolderName);
 
@@ -249,7 +252,17 @@ class MailClient
 				: \MailSo\Imap\Enumerations\StoreAction::REMOVE_FLAGS_SILENT
 			;
 
-			$this->oImapClient->MessageStoreFlag('1:*', false, array($sMessageFlag), $sStoreAction);
+			if (is_array($aCustomUids))
+			{
+				if (0 < count($aCustomUids))
+				{
+					$this->oImapClient->MessageStoreFlag(implode(',', $aCustomUids), true, array($sMessageFlag), $sStoreAction);
+				}
+			}
+			else
+			{
+				$this->oImapClient->MessageStoreFlag('1:*', false, array($sMessageFlag), $sStoreAction);
+			}
 		}
 	}
 
@@ -310,14 +323,15 @@ class MailClient
 	/**
 	 * @param string $sFolderName
 	 * @param bool $bSetAction = true
+	 * @param array $aCustomUids = null
 	 *
 	 * @throws \MailSo\Base\Exceptions\InvalidArgumentException
 	 * @throws \MailSo\Net\Exceptions\Exception
 	 * @throws \MailSo\Imap\Exceptions\Exception
 	 */
-	public function MessageSetSeenToAll($sFolderName, $bSetAction = true)
+	public function MessageSetSeenToAll($sFolderName, $bSetAction = true, $aCustomUids = null)
 	{
-		$this->MessageSetFlagToAll($sFolderName, \MailSo\Imap\Enumerations\MessageFlag::SEEN, $bSetAction, true);
+		$this->MessageSetFlagToAll($sFolderName, \MailSo\Imap\Enumerations\MessageFlag::SEEN, $bSetAction, true, $aCustomUids);
 	}
 
 	/**
@@ -919,7 +933,7 @@ class MailClient
 			'UidNext' => $sUidNext,
 			'Flags' => $aFlags,
 			'HighestModSeq' => $sHighestModSeq,
-			'NewMessages' => 'INBOX' === $sFolderName ?
+			'NewMessages' => 'INBOX' === $sFolderName && \MailSo\Config::$CheckNewMessages ?
 				$this->getFolderNextMessageInformation($sFolderName, $sPrevUidNext, $sUidNext) : array()
 		);
 
@@ -2182,10 +2196,10 @@ class MailClient
 
 			$aFilteredNames = array(
 				'inbox',
-				'sent', 'outbox', 'sentmail',
-				'drafts',
-				'junk', 'spam',
-				'trash', 'bin',
+				'sent', 'send', 'outbox', 'sentmail', 'sendmail',
+				'drafts', 'draft',
+				'junk', 'spam', 'spambucket',
+				'trash', 'bin', 'deleted',
 				'archives', 'archive', 'allmail', 'all',
 				'starred', 'flagged', 'important',
 				'contacts', 'chats'
@@ -2198,7 +2212,7 @@ class MailClient
 			foreach ($aMailFoldersHelper as $iIndex => /* @var $oImapFolder \MailSo\Mail\Folder */ $oFolder)
 			{
 				// mandatory folders
-				if ($oFolder && \in_array(\strtolower($oFolder->NameRaw()), $aFilteredNames))
+				if ($oFolder && \in_array(\str_replace(' ', '', \strtolower($oFolder->NameRaw())), $aFilteredNames))
 				{
 					$aNewMailFoldersHelper[] = $oFolder;
 					$aMailFoldersHelper[$iIndex] = null;

@@ -71,7 +71,7 @@ pt_BR:
     BUTTON_NOT_SPAM: "Não é Lixo Eletrônico"
     BUTTON_EMPTY_FOLDER: "Esvaziar Pasta"
     BUTTON_MULTY_FORWARD: "Encaminhar mensagens"
-    BUTTON_DELETE_WITHOUT_MOVE: "Excluir penmanentemente"
+    BUTTON_DELETE_WITHOUT_MOVE: "Excluir permanentemente"
     BUTTON_MORE: "Mais"
     MENU_SET_SEEN: "Marcar como lida"
     MENU_SET_ALL_SEEN: "Marcar todas como lidas"
@@ -102,6 +102,7 @@ pt_BR:
     BUTTON_BACK: "Voltar"
     BUTTON_CLOSE: "Fechar"
     BUTTON_DELETE: "Excluir"
+    BUTTON_UNSUBSCRIBE: "Cancelar a assinatura desta lista"
     BUTTON_ARCHIVE: "Arquivar"
     BUTTON_SPAM: "Lixo Eletrônico"
     BUTTON_NOT_SPAM: "Não é Lixo Eletrônico"
@@ -144,6 +145,7 @@ pt_BR:
     PRINT_LABEL_ATTACHMENTS: "Anexos"
     MESSAGE_LOADING: "Carregando"
     MESSAGE_VIEW_DESC: "Selecione uma mensagem para visualizá-la aqui."
+    MESSAGE_VIEW_MOVE_DESC: "Clique no nome da pasta no painel esquerdo para selecionar o destino."
     PGP_PASSWORD_INPUT_PLACEHOLDER: "Senha"
     PGP_SIGNED_MESSAGE_DESC: "Mensagem assinada com OpenPGP (clique para verificar)"
     PGP_ENCRYPTED_MESSAGE_DESC: "Mensagem criptografada com OpenPGP (clique para descriptografar)"
@@ -153,10 +155,10 @@ pt_BR:
   READ_RECEIPT:
     SUBJECT: "Aviso de recepção (Visualizada) - %SUBJECT%"
     BODY: |
-      Comprovante de retorno para o e-mail que você enviou para %READ-RECEIPT%.
+        Comprovante de retorno para o e-mail que você enviou para %READ-RECEIPT%.
 
-      Nota: Este comprovante de retorno apenas reconhece que a mensagem foi exibida no computador do destinatário.
-      Não há garantia de que o destinatário tenha lido ou compreendido o conteúdo da mensagem.
+        Nota: Este comprovante de retorno apenas reconhece que a mensagem foi exibida no computador do destinatário.
+        Não há garantia de que o destinatário tenha lido ou compreendido o conteúdo da mensagem.
   SUGGESTIONS:
     SEARCHING_DESC: "Procurando..."
   CONTACTS:
@@ -363,15 +365,15 @@ pt_BR:
     BUTTON_CANCEL: "Cancelar"
     BUTTON_CLOSE: "Fechar"
     NOTIFICATION_SENT: |
-      Você não selecionou a pasta "Enviadas" do sistema que será colocada as mensagens após o envio.
-      Se você não quiser salvar a mensagem enviada, por favor selecione a opção"Não usar".
+        Você não selecionou a pasta "Enviadas" do sistema que será colocada as mensagens após o envio.
+        Se você não quiser salvar a mensagem enviada, por favor selecione a opção"Não usar".
     NOTIFICATION_DRAFTS: "Você não selecionou a pasta \"Rascunhos\" do sistema que será colocada as mensagens salvas durante a composição."
     NOTIFICATION_SPAM: |
-      Você não selecionou a pasta "Lixo Eletrônico" do sistema que será colocada as mensagens spams.
-      Se você deseja remover a mensagem permanentemente, por favor selecione a opção"Não usar".
+        Você não selecionou a pasta "Lixo Eletrônico" do sistema que será colocada as mensagens spams.
+        Se você deseja remover a mensagem permanentemente, por favor selecione a opção"Não usar".
     NOTIFICATION_TRASH: |
-      Você não selecionou a pasta do sistema que serão colocadas as mensagens excluídas.
-      Se você deseja remover a mensagem permanentemente, por favor selecione a opção"Não usar".
+        Você não selecionou a pasta do sistema que serão colocadas as mensagens excluídas.
+        Se você deseja remover a mensagem permanentemente, por favor selecione a opção"Não usar".
     NOTIFICATION_ARCHIVE: "Você não selecionou a pasta \"Arquivadas\" do sistema que serão colocadas as mensagens arquivadas."
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "Verificação de duas etapas"
@@ -393,12 +395,12 @@ pt_BR:
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Configurado"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Não configurado"
     TWO_FACTOR_SECRET_DESC: >-
-      Importe este código no seu cliente Google Authenticator (ou outro cliente TOTP)
-      usando o QR code abaixo ou informando o código manualmente.
+        Importe este código no seu cliente Google Authenticator (ou outro cliente
+        TOTP) usando o QR code abaixo ou informando o código manualmente.
     TWO_FACTOR_BACKUP_CODES_DESC: >-
-      Se você não puder receber os códigos via Google Authenticator, você pode usar
-      esses códigos de backup para acessar sua conta. Depois de você usar um código
-      de backup, ele se expira.
+        Se você não puder receber os códigos via Google Authenticator, você pode usar
+        esses códigos de backup para acessar sua conta. Depois de você usar um código
+        de backup, ele se expira.
     TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "Você não pode alterar essa configuração antes do teste."
   TITLES:
     LOADING: "Carregando"
@@ -415,7 +417,7 @@ pt_BR:
     ERROR_FILE_TYPE: "Tipo de arquivo inválido"
     ERROR_UNKNOWN: "Ocorreu um erro de envio de arquivo desconhecido"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Texto simples"
+    TEXT_SWITCHER_PLAINT_TEXT: "HTML <-> TEXTO"
     TEXT_SWITCHER_RICH_FORMATTING: "Formatação avançada"
     TEXT_SWITCHER_CONFIRM: "A formatação de texto e as imagens serão perdidas. Tem certeza de que deseja continuar?"
   SETTINGS_LABELS:
@@ -458,10 +460,11 @@ pt_BR:
     LABEL_ADD_SIGNATURE_TO_ALL: "Adicionar sua assinatura em todas as mensagens de saída"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Segurança"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Configurar verificação de 2 etapas"
+    LABEL_CONFIGURE_TWO_FACTOR: "Configurar verificação de 2 etapas"
     LABEL_AUTOLOGOUT: "Deslogar Automaticamente"
     AUTOLOGIN_NEVER_OPTION_NAME: "Nunca"
     AUTOLOGIN_MINUTES_OPTION_NAME: "%MINUTES% minutos"
+    AUTOLOGIN_HOURS_OPTION_NAME: "%HOURS% hora(s)"
   SETTINGS_GENERAL:
     LEGEND_GENERAL: "Geral"
     LABEL_LANGUAGE: "Idioma"
@@ -527,7 +530,7 @@ pt_BR:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Lista de pastas"
     BUTTON_CREATE: "Criar pasta"
-    BUTTON_SYSTEM: "Selecione as pastas do sistema"
+    BUTTON_SYSTEM: "Pastas do Sistema"
     BUTTON_DELETE: "Excluir"
     BUTTON_SUBSCRIBE: "Acompanhar"
     BUTTON_UNSUBSCRIBE: "Não acompanhar"
@@ -638,17 +641,17 @@ pt_BR:
     CONNECTION_ERROR: "Não foi possível conectar-se ao servidor"
     CAPTCHA_ERROR: "Verificação CAPTCHA incorreta."
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >
-      Esta ID social não é atribuído para qualquer conta de e-mail ainda. Entre usando
-      suas credenciais de e-mail e ative o recursso de logar pelo Facebook em configurações
-      de conta.
+        Esta ID social não é atribuído para qualquer conta de e-mail ainda. Entre
+        usando suas credenciais de e-mail e ative o recursso de logar pelo Facebook
+        em configurações de conta.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >
-      Esta ID social não é atribuído para qualquer conta de e-mail ainda. Entre usando
-      suas credenciais de e-mail e ative o recursso de logar pelo Twitter em configurações
-      de conta.
+        Esta ID social não é atribuído para qualquer conta de e-mail ainda. Entre
+        usando suas credenciais de e-mail e ative o recursso de logar pelo Twitter
+        em configurações de conta.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >
-      Esta ID social não é atribuído para qualquer conta de e-mail ainda. Entre usando
-      suas credenciais de e-mail e ative o recursso de logar pelo Google em configurações
-      de conta.
+        Esta ID social não é atribuído para qualquer conta de e-mail ainda. Entre
+        usando suas credenciais de e-mail e ative o recursso de logar pelo Google
+        em configurações de conta.
     DOMAIN_NOT_ALLOWED: "Este domínio não é permitido"
     ACCOUNT_NOT_ALLOWED: "Conta não permitida"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "Verificação de duas etapas requerida"
@@ -699,13 +702,13 @@ pt_BR:
     PHP_VERSION_ERROR_DESC: "Sua versão PHP (%VERSION%) é menor do que o mínimo exigido 5.3.0!"
     NO_SCRIPT_TITLE: "JavaScript é necessário para esta aplicação."
     NO_SCRIPT_DESC: |
-      O JavaScript não está disponível em seu navegador.
-      Por favor ative o suporte a JavaScript nas configurações do seu navegador e tente novamente.
+        O JavaScript não está disponível em seu navegador.
+        Por favor ative o suporte a JavaScript nas configurações do seu navegador e tente novamente.
     NO_COOKIE_TITLE: "É necessário suporte a cookies para esta aplicação."
     NO_COOKIE_DESC: |
-      Os Cookies não estão disponíveis em seu navegador.
-      Por favor ative o suporte a Cookies nas configurações do seu navegador e tente novamente.
+        Os Cookies não estão disponíveis em seu navegador.
+        Por favor ative o suporte a Cookies nas configurações do seu navegador e tente novamente.
     BAD_BROWSER_TITLE: "Seu navegador está desatualizado."
     BAD_BROWSER_DESC: |
-      Para usar todos os recursos do aplicativo,
-      baixe e instale um desses navegadores:
+        Para usar todos os recursos do aplicativo,
+        baixe e instale um desses navegadores:

@@ -17,6 +17,9 @@ lt_LT:
     BUTTON_SETTINGS: "Nustatymai"
     BUTTON_HELP: "Pagalba"
     BUTTON_LOGOUT: "Atsijungti"
+  MOBILE:
+    BUTTON_MOBILE_VERSION: "Mobili versija"
+    BUTTON_DESKTOP_VERSION: "Standartinė versija"
   SEARCH:
     MAIN_INPUT_PLACEHOLDER: "Paieška"
     TITLE_ADV: "Detali paieška"
@@ -50,6 +53,7 @@ lt_LT:
   FOLDER_LIST:
     BUTTON_COMPOSE: "Sukurti"
     BUTTON_CONTACTS: "Kontaktai"
+    BUTTON_NEW_MESSAGE: "Rašyti naują"
     INBOX_NAME: "Gautieji"
     SENT_NAME: "Išsiųsti"
     DRAFTS_NAME: "Juodraščiai"
@@ -70,7 +74,7 @@ lt_LT:
     BUTTON_DELETE_WITHOUT_MOVE: "Naikinti visam laikui"
     BUTTON_MORE: "Daugiau"
     MENU_SET_SEEN: "Pažymėti kaip skaitytą"
-    MENU_SET_ALL_SEEN: "Pažymėti visus kaip neskaitytus"
+    MENU_SET_ALL_SEEN: "Pažymėti visus kaip skaitytus"
     MENU_UNSET_SEEN: "Pažymėti kaip neskaitytą"
     MENU_SET_FLAG: "Pažymėti žvaigždute"
     MENU_UNSET_FLAG: "Panaikinti žymėjimą"
@@ -98,6 +102,7 @@ lt_LT:
     BUTTON_BACK: "Atgal"
     BUTTON_CLOSE: "Uždaryti"
     BUTTON_DELETE: "Naikinti"
+    BUTTON_UNSUBSCRIBE: "Atsisakyti šios prenumeratos"
     BUTTON_ARCHIVE: "Archyvas"
     BUTTON_SPAM: "Šlamštas"
     BUTTON_NOT_SPAM: "Ne šlamštas"
@@ -140,6 +145,7 @@ lt_LT:
     PRINT_LABEL_ATTACHMENTS: "Priedai"
     MESSAGE_LOADING: "Kraunasi"
     MESSAGE_VIEW_DESC: "Pasirinkite žinutę sąraše, kad matytumėte jos turinį čia."
+    MESSAGE_VIEW_MOVE_DESC: "Kairėje pasirinkite katalogą, į kurį norite perkelti."
     PGP_PASSWORD_INPUT_PLACEHOLDER: "Slaptažodis"
     PGP_SIGNED_MESSAGE_DESC: "OpenPGP pasirašytas pranešimas (spustelkite patikrinimui)"
     PGP_ENCRYPTED_MESSAGE_DESC: "OpenPGP šifruotas pranešimas (spustelkite iššifravimui)"
@@ -149,10 +155,10 @@ lt_LT:
   READ_RECEIPT:
     SUBJECT: "Pristatymo patvirtinimas (laiškas parodytas) - %SUBJECT%"
     BODY: |
-      Tai yra laiško pristatymo patvirtinimas, kurį Jūs siuntėte gavėjui %READ-RECEIPT%.
+        Tai yra laiško pristatymo patvirtinimas, kurį Jūs siuntėte gavėjui %READ-RECEIPT%.
 
-      Pastaba: Šis pranešimas įrodo, kad laiškas buvo rodomas gavėjo kompiuteryje.
-      Nėra jokios garantijos, kad gavėjas perskaitė ar suprato laiško turinį.
+        Pastaba: Šis pranešimas įrodo, kad laiškas buvo rodomas gavėjo kompiuteryje.
+        Nėra jokios garantijos, kad gavėjas perskaitė ar suprato laiško turinį.
   SUGGESTIONS:
     SEARCHING_DESC: "Ieškome..."
   CONTACTS:
@@ -359,15 +365,15 @@ lt_LT:
     BUTTON_CANCEL: "Atšaukti"
     BUTTON_CLOSE: "Uždaryti"
     NOTIFICATION_SENT: |
-      Nepasirinkote "Išsiųstieji" katalogo išsiųstiems laiškams saugoti.
-      Jei nenorite saugoti laiškų po išsiuntimo, pasirinkite "Nenaudoti" variantą.
+        Nepasirinkote "Išsiųstieji" katalogo išsiųstiems laiškams saugoti.
+        Jei nenorite saugoti laiškų po išsiuntimo, pasirinkite "Nenaudoti" variantą.
     NOTIFICATION_DRAFTS: "Nepasirinkote  \"Juodraščiai\" sisteminio katalogo žinutėms, kurios saugomos kol jas rašote."
     NOTIFICATION_SPAM: |
-      Nepasirinkote "Šlamštas" sisteminio katalogo laikyti nepageidaujamies laiškams.
-      Jei norite nekaupti šlamšto ir iškart išmesti, pasirinkite "Nenaudoti" variantą.
+        Nepasirinkote "Šlamštas" sisteminio katalogo laikyti nepageidaujamies laiškams.
+        Jei norite nekaupti šlamšto ir iškart išmesti, pasirinkite "Nenaudoti" variantą.
     NOTIFICATION_TRASH: |
-      Nepasirinkote "Šiukšliadėžė" sisteminio katalogo ištrintoms žinutėms.
-      Jei nenorite naudotis šiukšliadėže ir išmesti laiškus visam laikui iškart juos trinant, pasirinkite  "Nenaudoti" variantą.
+        Nepasirinkote "Šiukšliadėžė" sisteminio katalogo ištrintoms žinutėms.
+        Jei nenorite naudotis šiukšliadėže ir išmesti laiškus visam laikui iškart juos trinant, pasirinkite  "Nenaudoti" variantą.
     NOTIFICATION_ARCHIVE: "Nepasirinkote \"Archyvas\" sisteminio katalogo."
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "2-jų žingsnių patikrinimas"
@@ -389,12 +395,12 @@ lt_LT:
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Sukonfiguruota"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Nesukonfiguruota"
     TWO_FACTOR_SECRET_DESC: >-
-      Importuoti šią informaciją į Google autentifikavimo klientą naudojant žemiau
-      pateiktą QR kodą arba įveskite kodą rankiniu būdu.
+        Importuoti šią informaciją į Google autentifikavimo klientą naudojant žemiau
+        pateiktą QR kodą arba įveskite kodą rankiniu būdu.
     TWO_FACTOR_BACKUP_CODES_DESC: >-
-      Jei negaunate kodo per Google autentifikavimo klientą, galite nautotis savo
-      sukurta atsargine kodų kopija. Kai panaudosite atsarginę kopiją prisijungimui,
-      ji taps neaktyvi.
+        Jei negaunate kodo per Google autentifikavimo klientą, galite nautotis savo
+        sukurta atsargine kodų kopija. Kai panaudosite atsarginę kopiją prisijungimui,
+        ji taps neaktyvi.
     TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "Negalite paksiti šio nustatymo nepratestavę."
   TITLES:
     LOADING: "Kraunasi"
@@ -411,7 +417,7 @@ lt_LT:
     ERROR_FILE_TYPE: "Neleidžiamas failo tipas"
     ERROR_UNKNOWN: "Nežinoma klaida įkeliant failą"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Paprastas tekstas"
+    TEXT_SWITCHER_PLAINT_TEXT: "HTML <-> TEKSTAS"
     TEXT_SWITCHER_RICH_FORMATTING: "Raiškusis formatas"
     TEXT_SWITCHER_CONFIRM: "Teksto farmatas ir paveikslėliai bus prarasti. Tikrai norite tęsti?"
   SETTINGS_LABELS:
@@ -454,10 +460,11 @@ lt_LT:
     LABEL_ADD_SIGNATURE_TO_ALL: "Pridėti parašą visiems rašomiems laiškams"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Sauga"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Konfiguruoti 2-žingsnių patikrinimą"
+    LABEL_CONFIGURE_TWO_FACTOR: "Konfiguruoti 2-žingsnių patikrinimą"
     LABEL_AUTOLOGOUT: "Automatinis atsijungimas"
     AUTOLOGIN_NEVER_OPTION_NAME: "Niekada"
     AUTOLOGIN_MINUTES_OPTION_NAME: "po %MINUTES% minučių"
+    AUTOLOGIN_HOURS_OPTION_NAME: "po %HOURS% valandų"
   SETTINGS_GENERAL:
     LEGEND_GENERAL: "Pagrindiniai"
     LABEL_LANGUAGE: "Kalba"
@@ -523,7 +530,7 @@ lt_LT:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Katalogų sąrašas"
     BUTTON_CREATE: "Sukurti katalogą"
-    BUTTON_SYSTEM: "Pasirinkti sisteminius katalogus"
+    BUTTON_SYSTEM: "Sisteminiai katalogai"
     BUTTON_DELETE: "Pašalinti"
     BUTTON_SUBSCRIBE: "Prenumeruoti"
     BUTTON_UNSUBSCRIBE: "Atsisakyti prenumeratos"
@@ -620,6 +627,7 @@ lt_LT:
     NO_PRIVATE_KEY_FOUND: "Privačių raktų nerasta"
     NO_PRIVATE_KEY_FOUND_FOR: "Privačių raktų nerasta \"%EMAIL%\" laiškui"
     ADD_A_PUBLICK_KEY: "Add a public key"
+    SELECT_A_PRIVATE_KEY: "Parinkti privatų raktą"
     UNVERIFIRED_SIGNATURE: "Nepatikrintas parašas"
     DECRYPTION_ERROR: "OpenPGP dekodavimo klaida"
     GOOD_SIGNATURE: "Tinkamas parašas nuo %USER%"
@@ -633,14 +641,14 @@ lt_LT:
     CONNECTION_ERROR: "Nepavyskta prisijungti prie serverio"
     CAPTCHA_ERROR: "Neteisingas CAPTCHA."
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >-
-      Šis socialinis ID nepriskirtas jokiai e-pašto paskyrai. Prisijunkite naudojant
-      elektroninio pašto rekvizitus ir įjunkite šią funkciją paskyros nustatymuose.
+        Šis socialinis ID nepriskirtas jokiai e-pašto paskyrai. Prisijunkite naudojant
+        elektroninio pašto rekvizitus ir įjunkite šią funkciją paskyros nustatymuose.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >-
-      Šis socialinis ID nepriskirtas jokiai e-pašto paskyrai. Prisijunkite naudojant
-      elektroninio pašto rekvizitus ir įjunkite šią funkciją paskyros nustatymuose.
+        Šis socialinis ID nepriskirtas jokiai e-pašto paskyrai. Prisijunkite naudojant
+        elektroninio pašto rekvizitus ir įjunkite šią funkciją paskyros nustatymuose.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >-
-      Šis socialinis ID nepriskirtas jokiai e-pašto paskyrai. Prisijunkite naudojant
-      elektroninio pašto rekvizitus ir įjunkite šią funkciją paskyros nustatymuose.
+        Šis socialinis ID nepriskirtas jokiai e-pašto paskyrai. Prisijunkite naudojant
+        elektroninio pašto rekvizitus ir įjunkite šią funkciją paskyros nustatymuose.
     DOMAIN_NOT_ALLOWED: "Šis subdomenas neleidžiamas"
     ACCOUNT_NOT_ALLOWED: "Paskyra neleidžiama"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "Būtinas dviejų veiksnių patikrinimas"
@@ -691,13 +699,13 @@ lt_LT:
     PHP_VERSION_ERROR_DESC: "Jūsų PHP versija (%VERSION%) žemesnė, nei reikalaujama 5.3.0!"
     NO_SCRIPT_TITLE: "Šiai aplikacijai reikalinga JavaScript."
     NO_SCRIPT_DESC: |
-      JavaScript nepalaikoma Jūsų naršyklėje.
-      Įjunkite JavaScript palaikymą naršyklėje ir bandykite vėl.
+        JavaScript nepalaikoma Jūsų naršyklėje.
+        Įjunkite JavaScript palaikymą naršyklėje ir bandykite vėl.
     NO_COOKIE_TITLE: "Slapukų palaikymas būtinas šiai aplikacijai."
     NO_COOKIE_DESC: |
-      Slapukų palaikymas negalimas jūsų naršyklėje.
-      Įjunkite slapukų palaikymą naršyklėje ir bandykite vėl.
+        Slapukų palaikymas negalimas jūsų naršyklėje.
+        Įjunkite slapukų palaikymą naršyklėje ir bandykite vėl.
     BAD_BROWSER_TITLE: "Jūsų naršyklė pasenusi."
     BAD_BROWSER_DESC: |
-      Norint naudotis visais šios aplikacijos privalumais,
-      parsisiųskite ir įsidiekite vieną iš šių naršyklių:
+        Norint naudotis visais šios aplikacijos privalumais,
+        parsisiųskite ir įsidiekite vieną iš šių naršyklių:

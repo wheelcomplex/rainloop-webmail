@@ -102,6 +102,7 @@ sl_SI:
     BUTTON_BACK: "Nazaj"
     BUTTON_CLOSE: "Zapri"
     BUTTON_DELETE: "Izbriši"
+    BUTTON_UNSUBSCRIBE: "Odjava s tega seznama"
     BUTTON_ARCHIVE: "Arhiviraj"
     BUTTON_SPAM: "Vsiljena pošta"
     BUTTON_NOT_SPAM: "Ni vsiljena pošta"
@@ -144,6 +145,7 @@ sl_SI:
     PRINT_LABEL_ATTACHMENTS: "Priloge"
     MESSAGE_LOADING: "Nalaganje"
     MESSAGE_VIEW_DESC: "Izberite sporočilo s seznama za ogled."
+    MESSAGE_VIEW_MOVE_DESC: "Za izbor cilja kliknite na ime mape na levi strani."
     PGP_PASSWORD_INPUT_PLACEHOLDER: "Geslo"
     PGP_SIGNED_MESSAGE_DESC: "Sporočilo, podpisano z OpenPGP  (kliknite za overovitev)"
     PGP_ENCRYPTED_MESSAGE_DESC: "Sporočilo, šifrirano z OpenPGP (kliknite za dešifriranje)"
@@ -153,10 +155,10 @@ sl_SI:
   READ_RECEIPT:
     SUBJECT: "Povratno poročilo (prikazano) - %SUBJECT%"
     BODY: |
-      To je povratno poročilo za sporočilo, ki je bilo poslano na %READ-RECEIPT%.
+        To je povratno poročilo za sporočilo, ki je bilo poslano na %READ-RECEIPT%.
 
-      Opomba: "To povratno poročilo pomeni le, da je bilo sporočilo prikazano na računalniku prejemnika."
-      Ni jamstva za prejemnikovo razumevanje vsebine sporočila.
+        Opomba: "To povratno poročilo pomeni le, da je bilo sporočilo prikazano na računalniku prejemnika."
+        Ni jamstva za prejemnikovo razumevanje vsebine sporočila.
   SUGGESTIONS:
     SEARCHING_DESC: "Iskanje..."
   CONTACTS:
@@ -363,15 +365,15 @@ sl_SI:
     BUTTON_CANCEL: "Prekliči"
     BUTTON_CLOSE: "Zapri"
     NOTIFICATION_SENT: |
-      Niste izbrali sistemske mape "Poslano" za shranjevanje poslanih sporočil.
-      Če ne želite shranjevati poslanih sporočil, izberite možnost "Ne uporabi".
+        Niste izbrali sistemske mape "Poslano" za shranjevanje poslanih sporočil.
+        Če ne želite shranjevati poslanih sporočil, izberite možnost "Ne uporabi".
     NOTIFICATION_DRAFTS: "Niste izbrali sistemske mape \"Osnutki\" za začasno shranjevanje sporočil med sestavljanjem."
     NOTIFICATION_SPAM: |
-      Niste izbrali sistemske mape "Vsiljena pošta" za shranjevanje vsiljene pošte.
-      Če želite vsiljeno pošto sproti brisati, izberite možnost "Ne uporabi".
+        Niste izbrali sistemske mape "Vsiljena pošta" za shranjevanje vsiljene pošte.
+        Če želite vsiljeno pošto sproti brisati, izberite možnost "Ne uporabi".
     NOTIFICATION_TRASH: |
-      Niste izbrali sistemske mape "Smetnjak" za izbrisana sporočila pred trajnim brisanjem.
-      Če jih želite vedno trajno izbrisati, izberite možnost "Ne uporabi".
+        Niste izbrali sistemske mape "Smetnjak" za izbrisana sporočila pred trajnim brisanjem.
+        Če jih želite vedno trajno izbrisati, izberite možnost "Ne uporabi".
     NOTIFICATION_ARCHIVE: "Niste izbrali sistemske mape \"Arhiv\" za trajno arhiviranje sporočil."
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "2-stopenjsko overjanje (TOTP)"
@@ -393,11 +395,11 @@ sl_SI:
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Nastavljena"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Ni nastavljena"
     TWO_FACTOR_SECRET_DESC: >
-      Uvozite te podatke v Google Authenticator (ali drugo TOTP aplikacijo) z uporabo
-      spodnje QR kode ali ročnim vnosom kode.
+        Uvozite te podatke v Google Authenticator (ali drugo TOTP aplikacijo) z uporabo
+        spodnje QR kode ali ročnim vnosom kode.
     TWO_FACTOR_BACKUP_CODES_DESC: >
-      Če ne morete prejeti kode preko Google Authenticator (ali druge TOTP aplikacije),
-      lahko uporabite pomožne kode za vpis. Vsaka pomožna koda je za enkratno uporabo.
+        Če ne morete prejeti kode preko Google Authenticator (ali druge TOTP aplikacije),
+        lahko uporabite pomožne kode za vpis. Vsaka pomožna koda je za enkratno uporabo.
     TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "Ne morete spremenite te nastavitve brez preizkusa."
   TITLES:
     LOADING: "Nalaganje"
@@ -414,7 +416,7 @@ sl_SI:
     ERROR_FILE_TYPE: "Neveljaven tip datoteke"
     ERROR_UNKNOWN: "Neznana napaka pri nalaganju datoteke"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Navadno besedilo"
+    TEXT_SWITCHER_PLAINT_TEXT: "HTML <-> Navadno besedilo"
     TEXT_SWITCHER_RICH_FORMATTING: "Obogateno besedilo"
     TEXT_SWITCHER_CONFIRM: "Oblikovanje ter postavitev besedila in slik bosta izgubljena. Želite nadaljevati?"
   SETTINGS_LABELS:
@@ -457,10 +459,11 @@ sl_SI:
     LABEL_ADD_SIGNATURE_TO_ALL: "Dodaj podpis vsem odhodnim sporočilom"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Varnost"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Nastavljanje 2-stopenjskega overjanja"
+    LABEL_CONFIGURE_TWO_FACTOR: "Nastavljanje 2-stopenjskega overjanja"
     LABEL_AUTOLOGOUT: "Samodejna odjava"
     AUTOLOGIN_NEVER_OPTION_NAME: "Nikoli"
     AUTOLOGIN_MINUTES_OPTION_NAME: "%MINUTES% minut"
+    AUTOLOGIN_HOURS_OPTION_NAME: "%HOURS% ur"
   SETTINGS_GENERAL:
     LEGEND_GENERAL: "Splošno"
     LABEL_LANGUAGE: "Jezik"
@@ -526,7 +529,7 @@ sl_SI:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Seznam map"
     BUTTON_CREATE: "Ustvari mapo"
-    BUTTON_SYSTEM: "Izberi sistemske mape"
+    BUTTON_SYSTEM: "Sistemske mape"
     BUTTON_DELETE: "Izbriši"
     BUTTON_SUBSCRIBE: "Spremljaj"
     BUTTON_UNSUBSCRIBE: "Ne spremljaj"
@@ -637,14 +640,14 @@ sl_SI:
     CONNECTION_ERROR: "Ni mogoče vzpostaviti povezave s strežnikom"
     CAPTCHA_ERROR: "Napačen CAPTCHA."
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >
-      Ta družabni ID še ni določen nobenemu e-poštnemu računu. Prijavite se z podatki
-      za e-pošto in omogočite to v nastavitvah računa.
+        Ta družabni ID še ni določen nobenemu e-poštnemu računu. Prijavite se z podatki
+        za e-pošto in omogočite to v nastavitvah računa.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >
-      Ta družabni ID še ni določen nobenemu e-poštnemu računu. Prijavite se z podatki
-      za e-pošto in omogočite to v nastavitvah računa.
+        Ta družabni ID še ni določen nobenemu e-poštnemu računu. Prijavite se z podatki
+        za e-pošto in omogočite to v nastavitvah računa.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >
-      Ta družabni ID še ni določen nobenemu e-poštnemu računu. Prijavite se z podatki
-      za e-pošto in omogočite to v nastavitvah računa.
+        Ta družabni ID še ni določen nobenemu e-poštnemu računu. Prijavite se z podatki
+        za e-pošto in omogočite to v nastavitvah računa.
     DOMAIN_NOT_ALLOWED: "Domena ni dovoljena"
     ACCOUNT_NOT_ALLOWED: "Račun ni dovoljen"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "Obvezno 2-stopenjsko overjanje"
@@ -695,13 +698,13 @@ sl_SI:
     PHP_VERSION_ERROR_DESC: "Vaša PHP verzija (%VERSION%) je manjša kot potrebna 5.3.0!"
     NO_SCRIPT_TITLE: "Ta aplikacija potrebuje omogočen JavaScript."
     NO_SCRIPT_DESC: |
-      Brskalnik nima podpore za JavaScript.
-      Omogočite JavaScript v brskalniku in poskusite znova.
+        Brskalnik nima podpore za JavaScript.
+        Omogočite JavaScript v brskalniku in poskusite znova.
     NO_COOKIE_TITLE: "Ta aplikacije potrebuje omogočene piškotke."
     NO_COOKIE_DESC: |
-      Brskalnik nima omogočenih piškotkov.
-      Omogočite piškotke v brskalniku in poskusite znova.
+        Brskalnik nima omogočenih piškotkov.
+        Omogočite piškotke v brskalniku in poskusite znova.
     BAD_BROWSER_TITLE: "Brskalnik je zastarel."
     BAD_BROWSER_DESC: |
-      Za uporabo vseh funkcij te aplikacije
-      prenesite in namestite enega od teh brskalnikov:
+        Za uporabo vseh funkcij te aplikacije
+        prenesite in namestite enega od teh brskalnikov:

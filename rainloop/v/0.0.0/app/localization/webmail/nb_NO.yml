@@ -102,6 +102,7 @@ nb_NO:
     BUTTON_BACK: "Tilbake"
     BUTTON_CLOSE: "Lukk"
     BUTTON_DELETE: "Slett"
+    BUTTON_UNSUBSCRIBE: "Meld av e-postliste"
     BUTTON_ARCHIVE: "Arkiv"
     BUTTON_SPAM: "Søppelpost"
     BUTTON_NOT_SPAM: "Ikke søppelpost"
@@ -144,19 +145,21 @@ nb_NO:
     PRINT_LABEL_ATTACHMENTS: "Vedlegg"
     MESSAGE_LOADING: "Laster inn"
     MESSAGE_VIEW_DESC: "Trykk på en melding for å lese den"
+    MESSAGE_VIEW_MOVE_DESC: "Trykk på mappenavn i panelet til venstre for å velge mål."
     PGP_PASSWORD_INPUT_PLACEHOLDER: "Passord"
     PGP_SIGNED_MESSAGE_DESC: "OpenPGP-signert melding (trykk for å bekrefte)"
     PGP_ENCRYPTED_MESSAGE_DESC: "OpenPGP-kryptert melding (trykk for å dekryptere)"
     LINK_DOWNLOAD_AS_ZIP: "Last ned som zip-fil"
     LINK_SAVE_TO_OWNCLOUD: "Lage i Owncloud"
+    LINK_SAVE_TO_CLOUD: "Lagre på nett"
     LINK_SAVE_TO_DROPBOX: "Lagre i Dropbox"
   READ_RECEIPT:
     SUBJECT: "Lesebekreftelse (meldinga er lest) - %SUBJECT%"
     BODY: |
-      Dette er en lesebekreftelse på e-postmeldinga du sendte til %READ-RECEIPT%.
+        Dette er en lesebekreftelse på e-postmeldinga du sendte til %READ-RECEIPT%.
 
-      Merk: Denne bekreftelsen bekrefter bare at meldinga ble åpnet på mottakerens datamaskin,
-      og er ingen garanti for at mottakeren har lest, forstått eller er enig i innholdet.
+        Merk: Denne bekreftelsen bekrefter bare at meldinga ble åpnet på mottakerens datamaskin,
+        og er ingen garanti for at mottakeren har lest, forstått eller er enig i innholdet.
   SUGGESTIONS:
     SEARCHING_DESC: "Søker …"
   CONTACTS:
@@ -246,13 +249,13 @@ nb_NO:
   POPUPS_LANGUAGES:
     TITLE_LANGUAGES: "Velg språk"
   POPUPS_ADD_ACCOUNT:
-    TITLE_ADD_ACCOUNT: "Vil du legge til en konto?"
+    TITLE_ADD_ACCOUNT: "Legg til konto"
     BUTTON_ADD_ACCOUNT: "Legg til"
-    TITLE_UPDATE_ACCOUNT: "Vil du oppdatere en konto?"
+    TITLE_UPDATE_ACCOUNT: "Oppdater konto"
     BUTTON_UPDATE_ACCOUNT: "Oppdater"
   POPUPS_IDENTITY:
     TITLE_ADD_IDENTITY: "Vil du legge til en identitet?"
-    TITLE_UPDATE_IDENTITY: "Vil du oppdatere identitet?"
+    TITLE_UPDATE_IDENTITY: "Oppdater identitet"
     BUTTON_ADD_IDENTITY: "Legg til"
     BUTTON_UPDATE_IDENTITY: "Oppdater"
     LABEL_EMAIL: "E-post"
@@ -312,7 +315,7 @@ nb_NO:
     BUTTON_TEST: "Test"
   POPUPS_FILTER:
     TITLE_CREATE_FILTER: "Vil du lage et filter?"
-    TITLE_EDIT_FILTER: "Vil du oppdatere et filter?"
+    TITLE_EDIT_FILTER: "Oppdater filter"
     FILTER_NAME: "Navn"
     LEGEND_CONDITIONS: "Betingelser"
     LEGEND_ACTIONS: "Handlinger"
@@ -363,15 +366,15 @@ nb_NO:
     BUTTON_CANCEL: "Avbryt"
     BUTTON_CLOSE: "Lukk"
     NOTIFICATION_SENT: |
-      Du har ikke valgt «Sendt» som mappe for sendte meldinger.
-      Velg «Ikke bruk» hvis du ikke vil lagre sendte meldinger.
+        Du har ikke valgt «Sendt» som mappe for sendte meldinger.
+        Velg «Ikke bruk» hvis du ikke vil lagre sendte meldinger.
     NOTIFICATION_DRAFTS: "Du har ikke valgt «Kladd» som mappe hvor meldinger lagres mens du skriver."
     NOTIFICATION_SPAM: |
-      Du har ikke valgt «Søppelpost» som mappe for søppelpost.
-      Velg «Ikke bruk» hvis du vil slette slike meldinger for godt.
+        Du har ikke valgt «Søppelpost» som mappe for søppelpost.
+        Velg «Ikke bruk» hvis du vil slette slike meldinger for godt.
     NOTIFICATION_TRASH: |
-      Du har ikke valgt «Papirkurv» som mappe for slettede meldinger.
-      Velg «Ikke bruk» hvis du vil slette slike meldinger for godt.
+        Du har ikke valgt «Papirkurv» som mappe for slettede meldinger.
+        Velg «Ikke bruk» hvis du vil slette slike meldinger for godt.
     NOTIFICATION_ARCHIVE: "Du har ikke valgt «Arkiv» som mappe for arkiverte meldinger."
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "To-stegsbekreftelse"
@@ -393,11 +396,11 @@ nb_NO:
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Satt opp"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Ikke satt opp"
     TWO_FACTOR_SECRET_DESC: >-
-      Importer denne informasjonen til din Google Authenticator klient (eller andre
-      klienter) ved å bruke QR-koden under, eller ved å skrive inn koden manuelt.
+        Importer denne informasjonen til din Google Authenticator klient (eller andre
+        klienter) ved å bruke QR-koden under, eller ved å skrive inn koden manuelt.
     TWO_FACTOR_BACKUP_CODES_DESC: >-
-      Hvis du ikke mottar koder fra Google Authenticator, kan du bruke reservekodene
-      for å logge inn. Disse kodene kan bare brukes én gang.
+        Hvis du ikke mottar koder fra Google Authenticator, kan du bruke reservekodene
+        for å logge inn. Disse kodene kan bare brukes én gang.
     TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "Du kan ikke endre denne innstillinga før du tester den."
   TITLES:
     LOADING: "Laster inn"
@@ -414,7 +417,7 @@ nb_NO:
     ERROR_FILE_TYPE: "Ugyldig filtype"
     ERROR_UNKNOWN: "Det oppstod en ukjent feil under opplasting av fil"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Ren tekst"
+    TEXT_SWITCHER_PLAINT_TEXT: "HTML <-> TEKST"
     TEXT_SWITCHER_RICH_FORMATTING: "Rik tekst"
     TEXT_SWITCHER_CONFIRM: "Tekstformatering og bilder går tapt. Er du sikker på at du vil fortsette?"
   SETTINGS_LABELS:
@@ -457,10 +460,11 @@ nb_NO:
     LABEL_ADD_SIGNATURE_TO_ALL: "Vil du legge til signatur i alle utgående meldinger?"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Sikkerhet"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Sett opp to-stegsbekreftelse"
+    LABEL_CONFIGURE_TWO_FACTOR: "Sett opp to-stegsbekreftelse"
     LABEL_AUTOLOGOUT: "Logg ut automatisk etter"
     AUTOLOGIN_NEVER_OPTION_NAME: "Aldri"
     AUTOLOGIN_MINUTES_OPTION_NAME: "%MINUTES% minutt(er)"
+    AUTOLOGIN_HOURS_OPTION_NAME: "%HOURS% time(r)"
   SETTINGS_GENERAL:
     LEGEND_GENERAL: "Generelt"
     LABEL_LANGUAGE: "Språk"
@@ -526,7 +530,7 @@ nb_NO:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Mappeliste"
     BUTTON_CREATE: "Lag mappe"
-    BUTTON_SYSTEM: "Velg systemmapper"
+    BUTTON_SYSTEM: "Systemmapper"
     BUTTON_DELETE: "Slett"
     BUTTON_SUBSCRIBE: "Abonner"
     BUTTON_UNSUBSCRIBE: "Stopp abonnement"
@@ -572,11 +576,12 @@ nb_NO:
   SETTINGS_OPEN_PGP:
     LEGEND_OPEN_PGP: "OpenPGP"
     BUTTON_ADD_OPEN_PGP_KEY: "Importer OpenPGP-nøkkel"
-    BUTTON_GENERATE_OPEN_PGP_KEYS: "Generer OpenPGP-nøkler"
+    BUTTON_GENERATE_OPEN_PGP_KEYS: "Lag OpenPGP-nøkler"
     TITLE_PRIVATE: "Privat"
     TITLE_PUBLIC: "Offentlig"
     DELETING_ASK: "Er du sikker?"
     GENERATE_ONLY_HTTPS: "Kun HTTPS"
+    LABEL_ALLOW_DRAFT_AUTOSAVE: "Lagre utkast automatisk"
   SHORTCUTS_HELP:
     LEGEND_SHORTCUTS_HELP: "Tastatursnarveier"
     TAB_MAILBOX: "Innboks"
@@ -637,14 +642,14 @@ nb_NO:
     CONNECTION_ERROR: "Klarte ikke å koble til tjeneren"
     CAPTCHA_ERROR: "Feil CAPTCHA"
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >
-      Denne kontoen er ikke knyttet til en e-postadresse ennå. Logg inn med e-postadresse
-      og passord, og slå på denne funksjonen i kontoinnstillingene.
+        Denne kontoen er ikke knyttet til en e-postadresse ennå. Logg inn med e-postadresse
+        og passord, og slå på denne funksjonen i kontoinnstillingene.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >
-      Denne kontoen er ikke knyttet til en e-postadresse ennå. Logg inn med e-postadresse
-      og passord, og slå på denne funksjonen i kontoinnstillingene.
+        Denne kontoen er ikke knyttet til en e-postadresse ennå. Logg inn med e-postadresse
+        og passord, og slå på denne funksjonen i kontoinnstillingene.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >
-      Denne kontoen er ikke knyttet til en e-postadresse ennå. Logg inn med e-postadresse
-      og passord, og slå på denne funksjonen i kontoinnstillingene.
+        Denne kontoen er ikke knyttet til en e-postadresse ennå. Logg inn med e-postadresse
+        og passord, og slå på denne funksjonen i kontoinnstillingene.
     DOMAIN_NOT_ALLOWED: "Dette domenet tillates ikke"
     ACCOUNT_NOT_ALLOWED: "Denne kontoen tillates ikke"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "To-stegsbekreftelse kreves"
@@ -681,7 +686,7 @@ nb_NO:
     LICENSING_SERVER_IS_UNAVAILABLE: "Abonnementstjeneren er utilgjengelig"
     LICENSING_DOMAIN_EXPIRED: "Abonnementet på dette domenet er utløpt."
     LICENSING_DOMAIN_BANNED: "Abonnementet på dette domenet er forbudt."
-    DEMO_SEND_MESSAGE_ERROR: "Av sikkerhetshensyn er denne demo-kontoen blokkert fra å sende meldinger til eksterne e-postadresser."
+    DEMO_SEND_MESSAGE_ERROR: "Denne demo-kontoen er blokkert fra å sende meldinger til eksterne e-postadresser av sikkerhetshensyn."
     DEMO_ACCOUNT_ERROR: "Av sikkerhetshensyn er denne kontoen blokkert fra å utføre denne handlinga."
     ACCOUNT_ALREADY_EXISTS: "Kontoen finnes allerede"
     ACCOUNT_DOES_NOT_EXIST: "Kontoen finnes ikke"
@@ -695,13 +700,13 @@ nb_NO:
     PHP_VERSION_ERROR_DESC: "PHP-installasjonen din (%VERSION%) er eldre enn versjon 5.3.0"
     NO_SCRIPT_TITLE: "Dette programmet krever Javascript."
     NO_SCRIPT_DESC: |
-      Nettleseren din støtter ikke Javascript.
-      Slå på Javascript-støtte i nettleserens innstillinger, og prøv på nytt.
+        Nettleseren din støtter ikke Javascript.
+        Slå på Javascript-støtte i nettleserens innstillinger, og prøv på nytt.
     NO_COOKIE_TITLE: "Dette programmet krever støtte for informasjonskapsler («cookies»)."
     NO_COOKIE_DESC: |
-      Nettleseren din støtter ikke bruk av informasjonskapsler («cookies»).
-      Slå på cookie-støtte i nettleserens innstillinger, og prøv på nytt.
+        Nettleseren din støtter ikke bruk av informasjonskapsler («cookies»).
+        Slå på cookie-støtte i nettleserens innstillinger, og prøv på nytt.
     BAD_BROWSER_TITLE: "Nettleseren din er utdatert."
     BAD_BROWSER_DESC: |
-      Hvis du vil bruke alle funksjonene i programmet,
-      må du laste ned og installere en av disse nettleserne:
+        Hvis du vil bruke alle funksjonene i programmet,
+        må du laste ned og installere en av disse nettleserne:

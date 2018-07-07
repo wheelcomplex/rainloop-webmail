@@ -4,7 +4,7 @@ lv_LV:
     LABEL_LOGIN: "Ielogoties"
     LABEL_PASSWORD: "Parole"
     LABEL_SIGN_ME: "Atcerēties mani"
-    LABEL_VERIFICATION_CODE: "Verification Code"
+    LABEL_VERIFICATION_CODE: "Autentifikācijas kods"
     LABEL_DONT_ASK_VERIFICATION_CODE: "Don't ask for the code for 2 weeks"
     BUTTON_SIGN_IN: "Ielogoties"
     TITLE_SIGN_IN_GOOGLE: "Ielogoties izmantojot Google"
@@ -15,8 +15,11 @@ lv_LV:
   TOP_TOOLBAR:
     BUTTON_ADD_ACCOUNT: "Pievienot kontu"
     BUTTON_SETTINGS: "Uzstādijumi"
-    BUTTON_HELP: "Help"
+    BUTTON_HELP: "Palīdzība"
     BUTTON_LOGOUT: "Izlogoties"
+  MOBILE:
+    BUTTON_MOBILE_VERSION: "Mobilā versija"
+    BUTTON_DESKTOP_VERSION: "Darba virsmas versija"
   SEARCH:
     MAIN_INPUT_PLACEHOLDER: "Meklēt"
     TITLE_ADV: "Papildus meklēšana"
@@ -24,9 +27,9 @@ lv_LV:
     LABEL_ADV_TO: "Kam"
     LABEL_ADV_SUBJECT: "Tēma"
     LABEL_ADV_TEXT: "Teksts"
-    LABEL_ADV_HAS_ATTACHMENT: "Has attachment"
+    LABEL_ADV_HAS_ATTACHMENT: "Ir pielikums"
     LABEL_ADV_HAS_ATTACHMENTS: "Ir pielikumi"
-    LABEL_ADV_FLAGGED: "Flagged"
+    LABEL_ADV_FLAGGED: "Atzīmētie"
     LABEL_ADV_UNSEEN: "Unseen"
     LABEL_ADV_DATE: "Datums"
     LABEL_ADV_DATE_ALL: "Viss periods"
@@ -50,12 +53,13 @@ lv_LV:
   FOLDER_LIST:
     BUTTON_COMPOSE: "Rakstīt"
     BUTTON_CONTACTS: "Kontakti"
+    BUTTON_NEW_MESSAGE: "Jauns ziņojums"
     INBOX_NAME: "Iesūtne"
     SENT_NAME: "Nosūtītie"
     DRAFTS_NAME: "Melnraksti"
     SPAM_NAME: "Spams"
     TRASH_NAME: "Miskaste"
-    ARCHIVE_NAME: "Archive"
+    ARCHIVE_NAME: "Arhīvs"
   QUOTA:
     TITLE: "Kvotas izmantojums"
   MESSAGE_LIST:
@@ -98,6 +102,7 @@ lv_LV:
     BUTTON_BACK: "Atpakaļ"
     BUTTON_CLOSE: "Aizvērt"
     BUTTON_DELETE: "Dzēst"
+    BUTTON_UNSUBSCRIBE: "Atrakstīties no saraksta"
     BUTTON_ARCHIVE: "Archive"
     BUTTON_SPAM: "Spams"
     BUTTON_NOT_SPAM: "Not Spam"
@@ -149,10 +154,10 @@ lv_LV:
   READ_RECEIPT:
     SUBJECT: "Return Receipt (displayed) - %SUBJECT%"
     BODY: |
-      This is a Return Receipt for the mail that you sent to %READ-RECEIPT%.
+        This is a Return Receipt for the mail that you sent to %READ-RECEIPT%.
 
-      Note: This Return Receipt only acknowledges that the message was displayed on the recipient's computer.
-      There is no guarantee that the recipient has read or understood the message contents.
+        Note: This Return Receipt only acknowledges that the message was displayed on the recipient's computer.
+        There is no guarantee that the recipient has read or understood the message contents.
   SUGGESTIONS:
     SEARCHING_DESC: "Meklē..."
   CONTACTS:
@@ -235,6 +240,8 @@ lv_LV:
   POPUPS_WELCOME_PAGE:
     BUTTON_CLOSE: "Close"
   POPUPS_ASK:
+    BUTTON_YES: "Jā"
+    BUTTON_NO: "Nē"
     DESC_WANT_CLOSE_THIS_WINDOW: "Are you sure you want to close this window?"
     DESC_WANT_DELETE_MESSAGES: "Are you sure you want to delete the message(s)?"
   POPUPS_LANGUAGES:
@@ -357,15 +364,15 @@ lv_LV:
     BUTTON_CANCEL: "Atcelt"
     BUTTON_CLOSE: "Aizvērt"
     NOTIFICATION_SENT: |
-      Tu neesi izvēlējies "Izsūtne" sistēmas mapi, kurā ziņojumi tiek ielikti pēc nosūtīšanas.
-      Ja nevēlie saglabāt nosūtīto ziņu, lūdzu izvēlies "Nelietot" opciju.
+        Tu neesi izvēlējies "Izsūtne" sistēmas mapi, kurā ziņojumi tiek ielikti pēc nosūtīšanas.
+        Ja nevēlie saglabāt nosūtīto ziņu, lūdzu izvēlies "Nelietot" opciju.
     NOTIFICATION_DRAFTS: "Tu neesi izvēlējies \"Melnraksti\" sistemas mapi, kurā tiktu saglabāti ziņojumi, kamēr tie tiek rakstīti."
     NOTIFICATION_SPAM: |
-      Tu neesi izvēlējies "Spams" sistēmas mapi, kurā tiks ievietoti spam ziņojumi.
-      Ja tu vēlies izdzēst ziņojumus pavisam, izvēlies "Neizmantot" opciju.
+        Tu neesi izvēlējies "Spams" sistēmas mapi, kurā tiks ievietoti spam ziņojumi.
+        Ja tu vēlies izdzēst ziņojumus pavisam, izvēlies "Neizmantot" opciju.
     NOTIFICATION_TRASH: |
-      Tu neesi izvēlējies "Miskaste" sistēmas mapi.
-      Ja tu vēlies izdzēst ziņojumus pavisam, izvēlies "Neizmantot" opciju.
+        Tu neesi izvēlējies "Miskaste" sistēmas mapi.
+        Ja tu vēlies izdzēst ziņojumus pavisam, izvēlies "Neizmantot" opciju.
     NOTIFICATION_ARCHIVE: "You haven't selected \"Archive\" system folder achived messages are placed to.\n"
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "2-Step Verification"
@@ -387,11 +394,11 @@ lv_LV:
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Configured"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Not configured"
     TWO_FACTOR_SECRET_DESC: >-
-      Import this info into your Google Authenticator client (or other TOTP client)
-      using the provided QR code below or by entering the code manually.
+        Import this info into your Google Authenticator client (or other TOTP client)
+        using the provided QR code below or by entering the code manually.
     TWO_FACTOR_BACKUP_CODES_DESC: >-
-      If you can't receive codes via Google Authenticator, you can use backup codes
-      to sign in. After you’ve used a backup code to sign in, it will become inactive.
+        If you can't receive codes via Google Authenticator, you can use backup codes
+        to sign in. After you’ve used a backup code to sign in, it will become inactive.
     TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "You can't change this setting before test."
   TITLES:
     LOADING: "Lādējas"
@@ -408,7 +415,7 @@ lv_LV:
     ERROR_FILE_TYPE: "Nepareizs faila tips"
     ERROR_UNKNOWN: "Nezināma faila ielādes kļūda"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Teksta noformējums"
+    TEXT_SWITCHER_PLAINT_TEXT: "HTML <-> TEKSTS"
     TEXT_SWITCHER_RICH_FORMATTING: "Papildus teksta noformēums"
     TEXT_SWITCHER_CONFIRM: "Bildes un teksta noformējums pazudīs. Vai tiešām turpināt?"
   SETTINGS_LABELS:
@@ -451,10 +458,11 @@ lv_LV:
     LABEL_ADD_SIGNATURE_TO_ALL: "Add your signature to all the outgoing messages"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Security"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Configurate 2-Step verification"
+    LABEL_CONFIGURE_TWO_FACTOR: "Iestatīt 2 soļu autentifikāciju"
     LABEL_AUTOLOGOUT: "Auto Logout"
     AUTOLOGIN_NEVER_OPTION_NAME: "Never"
     AUTOLOGIN_MINUTES_OPTION_NAME: "%MINUTES% minute(s)"
+    AUTOLOGIN_HOURS_OPTION_NAME: "%HOURS%  Stunda(s)"
   SETTINGS_GENERAL:
     LEGEND_GENERAL: "Vispārējie"
     LABEL_LANGUAGE: "Valoda"
@@ -520,7 +528,7 @@ lv_LV:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Mapes"
     BUTTON_CREATE: "Izveidot mapi"
-    BUTTON_SYSTEM: "Izvēlēties sistēas mapes"
+    BUTTON_SYSTEM: "Sistēmas mapes"
     BUTTON_DELETE: "Dzēst"
     BUTTON_SUBSCRIBE: "Abonēt"
     BUTTON_UNSUBSCRIBE: "Atcelt abonēšanu"
@@ -590,6 +598,7 @@ lv_LV:
     LABEL_MOVE: "Move"
     LABEL_READ: "Read selected messages"
     LABEL_UNREAD: "Unread selected messages"
+    LABEL_IMPORTANT: "Svarīgi, atzīmēt iezīmētos ziņojumus"
     LABEL_SEARCH: "Search"
     LABEL_CANCEL_SEARCH: "Cancel search"
     LABEL_FULLSCREEN_ENTER: "Fullscreen (Preview pane layout)"
@@ -616,6 +625,7 @@ lv_LV:
     NO_PRIVATE_KEY_FOUND: "No private key found"
     NO_PRIVATE_KEY_FOUND_FOR: "No private key found for \"%EMAIL%\" email"
     ADD_A_PUBLICK_KEY: "Add a public key"
+    SELECT_A_PRIVATE_KEY: "Izvēlies privāto atslēgu"
     UNVERIFIRED_SIGNATURE: "Unverified signature"
     DECRYPTION_ERROR: "OpenPGP decryption error"
     GOOD_SIGNATURE: "Good signature from %USER%"
@@ -629,14 +639,14 @@ lv_LV:
     CONNECTION_ERROR: "Nevar savienoties ar serveri"
     CAPTCHA_ERROR: "Nepareizs kods"
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >-
-      Sociālā ID nav pievienot nevienam e-pastam. Ielogojaties ar e-pastu un ieslēdzat
-      šādu iespeju uzstādijumos.
+        Sociālā ID nav pievienot nevienam e-pastam. Ielogojaties ar e-pastu un ieslēdzat
+        šādu iespeju uzstādijumos.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >-
-      Sociālā ID nav pievienot nevienam e-pastam. Ielogojaties ar e-pastu un ieslēdzat
-      šādu iespeju uzstādijumos.
+        Sociālā ID nav pievienot nevienam e-pastam. Ielogojaties ar e-pastu un ieslēdzat
+        šādu iespeju uzstādijumos.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >-
-      Sociālā ID nav pievienot nevienam e-pastam. Ielogojaties ar e-pastu un ieslēdzat
-      šādu iespeju uzstādijumos.
+        Sociālā ID nav pievienot nevienam e-pastam. Ielogojaties ar e-pastu un ieslēdzat
+        šādu iespeju uzstādijumos.
     DOMAIN_NOT_ALLOWED: "Šis domēns nav atļauts"
     ACCOUNT_NOT_ALLOWED: "Account is not allowed"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "Two factor verification required"
@@ -676,6 +686,7 @@ lv_LV:
     DEMO_SEND_MESSAGE_ERROR: "Drošīnas iemeslu dēļ, demo konts nedrīks sūtīt e-pastu uz ārējiem e-pastiem!"
     DEMO_ACCOUNT_ERROR: "For security purposes, this account is not allowed for this action!"
     ACCOUNT_ALREADY_EXISTS: "Konts jau eksistē"
+    ACCOUNT_DOES_NOT_EXIST: "Konts neeksistē"
     MAIL_SERVER_ERROR: "Radās kļūda savienojoties ar serveri"
     INVALID_INPUT_ARGUMENT: "Invalid input argument"
     UNKNOWN_ERROR: "Nezināma kļūda"
@@ -686,13 +697,13 @@ lv_LV:
     PHP_VERSION_ERROR_DESC: "Jūsus PHP versija (%VERSION%) ir zemāka nekā atļauts 5.3.0!"
     NO_SCRIPT_TITLE: "JavaScript ir nepieciešams."
     NO_SCRIPT_DESC: |
-      Jūsu pārlūkprogramma neatbalsta JavaScript.
-      Lūdzu ieslēdziet JavaScript atbalstu.
+        Jūsu pārlūkprogramma neatbalsta JavaScript.
+        Lūdzu ieslēdziet JavaScript atbalstu.
     NO_COOKIE_TITLE: "Cookies atbalsts ir nepieciešams."
     NO_COOKIE_DESC: |
-      Cookies atbalsts nav pieejams šai pārlūkprogrammai.
-      Lūdzu ieslēdziet Cookies atbalstu.
+        Cookies atbalsts nav pieejams šai pārlūkprogrammai.
+        Lūdzu ieslēdziet Cookies atbalstu.
     BAD_BROWSER_TITLE: "Jūsu pārlūkprogramma ir novecojusi."
     BAD_BROWSER_DESC: |
-      Lai izmantotu pilnas šis aplikācijas iespējas,
-      lejupielādējat un uzinstalējas kādu no šīm pārlukprogrammām:
+        Lai izmantotu pilnas šis aplikācijas iespējas,
+        lejupielādējat un uzinstalējas kādu no šīm pārlukprogrammām:

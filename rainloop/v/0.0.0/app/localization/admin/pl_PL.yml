@@ -26,6 +26,7 @@ pl_PL:
     LABEL_ALLOW_LANGUAGES_ON_SETTINGS: "Zezwól użytkownikowi na wybór języka"
     LABEL_ALLOW_THEMES_ON_SETTINGS: "Zezwól użytkownikowi na zmianę motywu"
     LABEL_ALLOW_BACKGROUND_ON_SETTINGS: "Zezwól użytkownikowi na użycie własnego tła"
+    LABEL_NEW_FOLDER_MOVE: "Nowy przycisk \"przenieś do folderu\""
     LABEL_SHOW_THUMBNAILS: "Pokaż miniatury (załączniki)"
     LABEL_ALLOW_GRAVATAR: "Zezwól na używanie gravatarów"
     LEGEND_MAIN: "Główne"
@@ -35,11 +36,11 @@ pl_PL:
     LABEL_ALLOW_TEMPLATES: "Zezwól na używanie szablonów"
     ALERT_WARNING: "Ostrzeżenie!"
     HTML_ALERT_WEAK_PASSWORD: |
-      Korzystasz z domyślnego hasła administratora.
-      <br />
-      Ze względów bezpieczeństwa, proszę
-      <strong><a href="#/security">zmienić hasło</a></strong>
-      na inne.
+        Korzystasz z domyślnego hasła administratora.
+        <br />
+        Ze względów bezpieczeństwa, proszę
+        <strong><a href="#/security">zmienić hasło</a></strong>
+        na inne.
   TAB_LOGIN:
     LEGEND_LOGIN_SCREEN: "Logowanie"
     LABEL_DEFAULT_DOMAIN: "Domyślna domena:"
@@ -83,17 +84,18 @@ pl_PL:
     ALERT_NOTICE: "Powiadomienie!"
     HTML_ALERT_DO_NOT_USE_THIS_DATABASE: "Nie używaj tej bazy danych z dużą ilością aktywnych użytkowników."
     HTML_ALERT_DOES_NOT_SUPPORTED: |
-      Twój system nie zawiera wsparcia dla obsługi kontaktów.
-      <br />
-      Musisz zainstalować lub uruchomić na serwerze jedno z <strong>rozszerzeń PDO (SQLite / MySQL / PostgreSQL)</strong>.
+        Twój system nie zawiera wsparcia dla obsługi kontaktów.
+        <br />
+        Musisz zainstalować lub uruchomić na serwerze jedno z <strong>rozszerzeń PDO (SQLite / MySQL / PostgreSQL)</strong>.
   TAB_DOMAINS:
     LEGEND_DOMAINS: "Domeny"
     BUTTON_ADD_DOMAIN: "Dodaj domenę"
+    BUTTON_ADD_ALIAS: "Dodaj Alias"
     DELETE_ARE_YOU_SURE: "Czy na pewno?"
     HTML_DOMAINS_HELPER: |
-      Lista domen, do których można uzyskać dostęp poprzez tego klienta.
-      <br />
-      Kliknij na nazwę, aby skonfigurować domenę.
+        Lista domen, do których można uzyskać dostęp poprzez tego klienta.
+        <br />
+        Kliknij na nazwę, aby skonfigurować domenę.
   TAB_SECURITY:
     LEGEND_SECURITY: "Bezpieczeństwo"
     LABEL_ALLOW_TWO_STEP: "Zezwól na dwuskładnikową autoryzację"
@@ -152,8 +154,8 @@ pl_PL:
     HTML_ALERT_TOP_1: "RainLoop Webmail korzysta z licencji:"
     HTML_ALERT_TOP_2: "Możesz używać tego klienta <b>za darmo</b>, tylko dla prywatnych <b>(własnych)</b> projektów."
     HTML_ALERT_TOP_3: |
-      Do komercyjnego użytku (używania dodatkowych opcji) <b>RainLoop Webmail</b>, wymagane jest posiadanie
-      <a href=http://www.rainloop.net/purchase/ target=_blank>ważnej subskrypcji</a>.
+        Do komercyjnego użytku (używania dodatkowych opcji) <b>RainLoop Webmail</b>, wymagane jest posiadanie
+        <a href=http://www.rainloop.net/purchase/ target=_blank>ważnej subskrypcji</a>.
     TYPE_PREMIUM_LIFETIME: "Dożywotnia"
     LABEL_SUB_EXPIRES: "Subskrypcja wygasa:"
     BUTTON_ACTIVATE: "Aktywuj klucz"
@@ -181,11 +183,17 @@ pl_PL:
     ERROR_INVALID_SUBS_KEY: "Niepoprawny klucz subskrypcji"
     SUBS_KEY_ACTIVATED: "Aktywowano klucz subskrypcji"
     HTML_DESC: |
-      Subskrypcja premium dla domeny: <b>%DOMAIN%</b>, zostanie przedłużona po aktywacji.
-      <br />
-      Zwróc uwagę, że klucz subskrypcji może być aktywowany tylko dla jednej domeny.
-      <br /><br />
-      Po uruchomieniu aktywacji, nie można jej przerwac lub anulować.
+        Subskrypcja premium dla domeny: <b>%DOMAIN%</b>, zostanie przedłużona po aktywacji.
+        <br />
+        Zwróc uwagę, że klucz subskrypcji może być aktywowany tylko dla jednej domeny.
+        <br /><br />
+        Po uruchomieniu aktywacji, nie można jej przerwac lub anulować.
+  POPUPS_DOMAIN_ALIAS:
+    TITLE_ADD_DOMAIN_ALIAS: "Dodaj Alias"
+    LABEL_ALIAS: "Alias"
+    LABEL_DOMAIN: "Domena"
+    BUTTON_CLOSE: "Zamknij"
+    BUTTON_ADD: "Dodaj"
   POPUPS_DOMAIN:
     TITLE_ADD_DOMAIN: "Dodawanie domeny"
     TITLE_ADD_DOMAIN_WITH_NAME: "Dodawanie domeny: \"%NAME%\""
@@ -217,8 +225,8 @@ pl_PL:
     BUTTON_UPDATE: "Zaktualizuj"
     NEW_DOMAIN_DESC: "Konfiguracja tej domeny pozwala na pracę <br />z adresami email: <i>%NAME%</i>"
     WHITE_LIST_ALERT: |
-      Lista użytkowników domeny, którzy mogą uzyskać dostęp poprzez tego klienta.
-      Użyj spacji do rozdzielenia.
+        Lista użytkowników domeny, którzy mogą uzyskać dostęp poprzez tego klienta.
+        Użyj spacji do rozdzielenia.
   POPUPS_PLUGIN:
     TITLE_PLUGIN: "Wtyczka: "
     DESC_NOTHING_TO_CONFIGURE: "Brak opcji do skonfigurowania"
@@ -245,17 +253,17 @@ pl_PL:
     CONNECTION_ERROR: "Nie można połączyć się z serwerem"
     CAPTCHA_ERROR: "Niepoprawny kod CAPTCHA."
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >-
-      Logowanie poprzez tą platformę, nie zostało jeszcze aktywowane dla żadnego z
-      kont e-mail. Zaloguj się używając loginu i hasła, a następnie włącz tą funkcję
-      w ustawieniach konta.
+        Logowanie poprzez tą platformę, nie zostało jeszcze aktywowane dla żadnego
+        z kont e-mail. Zaloguj się używając loginu i hasła, a następnie włącz tą funkcję
+        w ustawieniach konta.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >-
-      Logowanie poprzez tą platformę, nie zostało jeszcze aktywowane dla żadnego z
-      kont e-mail. Zaloguj się używając loginu i hasła, a następnie włącz tą funkcję
-      w ustawieniach konta.
+        Logowanie poprzez tą platformę, nie zostało jeszcze aktywowane dla żadnego
+        z kont e-mail. Zaloguj się używając loginu i hasła, a następnie włącz tą funkcję
+        w ustawieniach konta.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >-
-      Logowanie poprzez tą platformę, nie zostało jeszcze aktywowane dla żadnego z
-      kont e-mail. Zaloguj się używając loginu i hasła, a następnie włącz tą funkcję
-      w ustawieniach konta.
+        Logowanie poprzez tą platformę, nie zostało jeszcze aktywowane dla żadnego
+        z kont e-mail. Zaloguj się używając loginu i hasła, a następnie włącz tą funkcję
+        w ustawieniach konta.
     DOMAIN_NOT_ALLOWED: "Brak zezwolenia na użycie tej domeny"
     ACCOUNT_NOT_ALLOWED: "Brak zezwolenia dla tego konta"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "Wymagana dwuskładnikowa autoryzacja"
@@ -306,13 +314,13 @@ pl_PL:
     PHP_VERSION_ERROR_DESC: "Twoja wersja PHP: (%VERSION%), jest niższa niż minimalna: 5.3.0!"
     NO_SCRIPT_TITLE: "Ta aplikacja do poprawnej pracy wymaga javascript-u."
     NO_SCRIPT_DESC: |
-      Twoja przeglądarka nie obsługuje javascript-u.
-      Proszę o jego włączenie i ponowną próbę.
+        Twoja przeglądarka nie obsługuje javascript-u.
+        Proszę o jego włączenie i ponowną próbę.
     NO_COOKIE_TITLE: "Obsługa plików cookies jest wymagana dla poprawnego działania skryptu."
     NO_COOKIE_DESC: |
-      Twoja przeglądarka nie obsługuje plików cookies.
-      Proszę o ich włączenie i ponowną próbę.
+        Twoja przeglądarka nie obsługuje plików cookies.
+        Proszę o ich włączenie i ponowną próbę.
     BAD_BROWSER_TITLE: "Posiadasz nieaktualną wersję przeglądarki."
     BAD_BROWSER_DESC: |
-      W celu wykorzystania wszystkich funkcji tej aplikacji,
-      zaktualizuj aktualnie używaną lub pobierz i zainstaluj jedną z poniższych przeglądarek:
+        W celu wykorzystania wszystkich funkcji tej aplikacji,
+        zaktualizuj aktualnie używaną lub pobierz i zainstaluj jedną z poniższych przeglądarek:

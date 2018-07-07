@@ -102,6 +102,7 @@ de_DE:
     BUTTON_BACK: "Zurück"
     BUTTON_CLOSE: "Schließen"
     BUTTON_DELETE: "Löschen"
+    BUTTON_UNSUBSCRIBE: "Diese Liste abbestellen"
     BUTTON_ARCHIVE: "Archiv"
     BUTTON_SPAM: "Spam"
     BUTTON_NOT_SPAM: "Kein Spam"
@@ -144,6 +145,7 @@ de_DE:
     PRINT_LABEL_ATTACHMENTS: "Anhänge"
     MESSAGE_LOADING: "Nachricht wird geladen"
     MESSAGE_VIEW_DESC: "Wählen Sie eine Nachricht aus der Liste aus, um sie anzuzeigen."
+    MESSAGE_VIEW_MOVE_DESC: "Klicke auf den Ordnernamen auf der linken Seite, um die Nachricht zu verschieben."
     PGP_PASSWORD_INPUT_PLACEHOLDER: "Passwort"
     PGP_SIGNED_MESSAGE_DESC: "OpenPGP-signierte Nachricht (klicken, um zu überprüfen)"
     PGP_ENCRYPTED_MESSAGE_DESC: "OpenPGP-verschlüsselte Nachricht (klicken, um zu entschlüsseln)"
@@ -153,10 +155,10 @@ de_DE:
   READ_RECEIPT:
     SUBJECT: "Empfangsbestätigung (angezeigt) - %SUBJECT%"
     BODY: |
-      Dies ist eine Empfangsbestätigung für die Nachricht, die Sie an %READ-RECEIPT% gesendet haben.
+        Dies ist eine Empfangsbestätigung für die Nachricht, die Sie an %READ-RECEIPT% gesendet haben.
 
-      Hinweis: Diese Empfangsbestätigung bestätigt nur, dass die Nachricht auf dem Computer des Empfängers angezeigt wurde.
-      Es besteht keine Garantie, dass der Empfänger den Inhalt der Nachricht gelesen oder verstanden hat.
+        Hinweis: Diese Empfangsbestätigung bestätigt nur, dass die Nachricht auf dem Computer des Empfängers angezeigt wurde.
+        Es besteht keine Garantie, dass der Empfänger den Inhalt der Nachricht gelesen oder verstanden hat.
   SUGGESTIONS:
     SEARCHING_DESC: "Suche läuft..."
   CONTACTS:
@@ -363,15 +365,15 @@ de_DE:
     BUTTON_CANCEL: "Abbrechen"
     BUTTON_CLOSE: "Schließen"
     NOTIFICATION_SENT: |
-      Sie haben keinen "Gesendet"-Systemordner gewählt, in dem Nachrichten nach dem Versenden gespeichert werden.
-      Falls Sie versandte Nachrichten nicht speichern möchten, wählen Sie die Option "Nicht anwenden".
+        Sie haben keinen "Gesendet"-Systemordner gewählt, in dem Nachrichten nach dem Versenden gespeichert werden.
+        Falls Sie versandte Nachrichten nicht speichern möchten, wählen Sie die Option "Nicht anwenden".
     NOTIFICATION_DRAFTS: "Sie haben keinen \"Entwürfe\"-Systemordner gewählt, in dem Nachrichten beim Erstellen gespeichert werden."
     NOTIFICATION_SPAM: |
-      Sie haben keinen "Spam"-Systemordner gewählt, in dem die Spam-Nachrichten abgelegt werden.
-      Falls Sie Spam-Nachrichten endgültig löschen möchten, wählen Sie die Option "Nicht anwenden".
+        Sie haben keinen "Spam"-Systemordner gewählt, in dem die Spam-Nachrichten abgelegt werden.
+        Falls Sie Spam-Nachrichten endgültig löschen möchten, wählen Sie die Option "Nicht anwenden".
     NOTIFICATION_TRASH: |
-      Sie haben keinen  "Papierkorb"-Systemordner gewählt, in dem die gelöschten Nachrichten abgelegt werden.
-      Falls Sie gelöschte Nachrichten endgültig löschen möchten, wählen Sie die Option "Nicht anwenden".
+        Sie haben keinen  "Papierkorb"-Systemordner gewählt, in dem die gelöschten Nachrichten abgelegt werden.
+        Falls Sie gelöschte Nachrichten endgültig löschen möchten, wählen Sie die Option "Nicht anwenden".
     NOTIFICATION_ARCHIVE: "Sie haben keinen \"Archiv\"-Systemordner gewählt, in dem die archivierten Nachrichten abgelegt werden."
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "Zwei-Faktor-Authentifizierung"
@@ -393,13 +395,13 @@ de_DE:
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Konfiguriert"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Nicht konfiguriert"
     TWO_FACTOR_SECRET_DESC: >-
-      Importieren Sie diese Information in Ihre Google-Authenticator-Anwendung (oder
-      andere TOTP-Anwendung), indem Sie den unten bereitgestellten QR-Code verwenden
-      oder den Code manuell eingeben.
+        Importieren Sie diese Information in Ihre Google-Authenticator-Anwendung (oder
+        andere TOTP-Anwendung), indem Sie den unten bereitgestellten QR-Code verwenden
+        oder den Code manuell eingeben.
     TWO_FACTOR_BACKUP_CODES_DESC: >-
-      Sollten Sie keine Codes über den Google Authenticator erhalten, können Sie einen
-      Sicherungscode zur Anmeldung verwenden. Der Sicherungscode wird inaktiv, sobald
-      Sie ihn zur Anmeldung verwendet haben.
+        Sollten Sie keine Codes über den Google Authenticator erhalten, können Sie
+        einen Sicherungscode zur Anmeldung verwenden. Der Sicherungscode wird inaktiv,
+        sobald Sie ihn zur Anmeldung verwendet haben.
     TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "Sie können diese Einstellung nicht ohne vorherigen Test verändern."
   TITLES:
     LOADING: "Wird geladen"
@@ -416,7 +418,7 @@ de_DE:
     ERROR_FILE_TYPE: "Ungültiger Dateityp"
     ERROR_UNKNOWN: "Ein unbekannter Fehler trat beim Hochladen auf"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Unformatierter Text"
+    TEXT_SWITCHER_PLAINT_TEXT: "HTML <-> TEXT"
     TEXT_SWITCHER_RICH_FORMATTING: "Formatierter Text (Rich Text)"
     TEXT_SWITCHER_CONFIRM: "Alle Textformatierungen und Grafiken gehen verloren. Wollen Sie wirklich fortfahren?"
   SETTINGS_LABELS:
@@ -459,10 +461,11 @@ de_DE:
     LABEL_ADD_SIGNATURE_TO_ALL: "Signatur zu allen ausgehenden Nachrichten hinzufügen"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Sicherheit"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Zwei-Faktor-Authentifizierung konfigurieren"
+    LABEL_CONFIGURE_TWO_FACTOR: "Zwei-Faktor-Authentifizierung konfigurieren"
     LABEL_AUTOLOGOUT: "Automatische Abmeldung"
     AUTOLOGIN_NEVER_OPTION_NAME: "Nie"
     AUTOLOGIN_MINUTES_OPTION_NAME: "%MINUTES% Minute(n)"
+    AUTOLOGIN_HOURS_OPTION_NAME: "%HOURS% Stunde(n)"
   SETTINGS_GENERAL:
     LEGEND_GENERAL: "Allgemein"
     LABEL_LANGUAGE: "Sprache"
@@ -528,7 +531,7 @@ de_DE:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Ordnerliste"
     BUTTON_CREATE: "Ordner anlegen"
-    BUTTON_SYSTEM: "Systemordner wählen"
+    BUTTON_SYSTEM: "Systemordner"
     BUTTON_DELETE: "Löschen"
     BUTTON_SUBSCRIBE: "Abonnieren"
     BUTTON_UNSUBSCRIBE: "Abonnement beenden"
@@ -639,17 +642,17 @@ de_DE:
     CONNECTION_ERROR: "Serververbindung kann nicht hergestellt werden"
     CAPTCHA_ERROR: "Falsche CAPTCHA-Eingabe."
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >
-      Diese Social-ID ist bisher mit keinem E-Mail-Konto verbunden. Melden Sie sich
-      mit Ihren E-Mail-Anmeldedaten an und aktivieren Sie diese Funktion in Ihren
-      Konteneinstellungen.
+        Diese Social-ID ist bisher mit keinem E-Mail-Konto verbunden. Melden Sie sich
+        mit Ihren E-Mail-Anmeldedaten an und aktivieren Sie diese Funktion in Ihren
+        Konteneinstellungen.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >
-      Diese Social-ID ist bisher mit keinem E-Mail-Konto verbunden. Melden Sie sich
-      mit Ihren E-Mail-Anmeldedaten an und aktivieren Sie diese Funktion in Ihren
-      Konteneinstellungen.
+        Diese Social-ID ist bisher mit keinem E-Mail-Konto verbunden. Melden Sie sich
+        mit Ihren E-Mail-Anmeldedaten an und aktivieren Sie diese Funktion in Ihren
+        Konteneinstellungen.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >
-      Diese Social-ID ist bisher mit keinem E-Mail-Konto verbunden. Melden Sie sich
-      mit Ihren E-Mail-Anmeldedaten an und aktivieren Sie diese Funktion in Ihren
-      Konteneinstellungen.
+        Diese Social-ID ist bisher mit keinem E-Mail-Konto verbunden. Melden Sie sich
+        mit Ihren E-Mail-Anmeldedaten an und aktivieren Sie diese Funktion in Ihren
+        Konteneinstellungen.
     DOMAIN_NOT_ALLOWED: "Diese Domain ist nicht zugelassen."
     ACCOUNT_NOT_ALLOWED: "Konto ist nicht zugelassen."
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "Zwei-Faktor-Authentifizierung erforderlich"
@@ -700,13 +703,13 @@ de_DE:
     PHP_VERSION_ERROR_DESC: "Ihre PHP Version (%VERSION%) ist älter als die notwendige Version: 5.3.0!"
     NO_SCRIPT_TITLE: "Diese Anwendung benötigt JavaScript."
     NO_SCRIPT_DESC: |
-      Ihr Browser unterstützt JavaScript nicht.
-      Aktivieren Sie bitte die JavaScript-Unterstützung in Ihrem Browser und versuchen Sie es erneut.
+        Ihr Browser unterstützt JavaScript nicht.
+        Aktivieren Sie bitte die JavaScript-Unterstützung in Ihrem Browser und versuchen Sie es erneut.
     NO_COOKIE_TITLE: "Diese Anwendung benötigt Cookies."
     NO_COOKIE_DESC: |
-      Ihr Browser unterstützt Cookies nicht.
-      Aktivieren Sie bitte die Cookie-Unterstützung in Ihrem Browser und versuchen Sie es erneut.
+        Ihr Browser unterstützt Cookies nicht.
+        Aktivieren Sie bitte die Cookie-Unterstützung in Ihrem Browser und versuchen Sie es erneut.
     BAD_BROWSER_TITLE: "Ihr Browser ist veraltet."
     BAD_BROWSER_DESC: |
-      Um alle Funktionen dieser Anwendung nutzen zu können,
-      sollten Sie einen der folgenden Browser herunterladen und installieren
+        Um alle Funktionen dieser Anwendung nutzen zu können,
+        sollten Sie einen der folgenden Browser herunterladen und installieren

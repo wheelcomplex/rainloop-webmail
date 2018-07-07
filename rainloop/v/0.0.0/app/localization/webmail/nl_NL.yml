@@ -17,6 +17,9 @@ nl_NL:
     BUTTON_SETTINGS: "Instellingen"
     BUTTON_HELP: "Help"
     BUTTON_LOGOUT: "Afmelden"
+  MOBILE:
+    BUTTON_MOBILE_VERSION: "Mobiele versie"
+    BUTTON_DESKTOP_VERSION: "Desktop versie"
   SEARCH:
     MAIN_INPUT_PLACEHOLDER: "Zoeken"
     TITLE_ADV: "Geavanceerd zoeken"
@@ -50,6 +53,7 @@ nl_NL:
   FOLDER_LIST:
     BUTTON_COMPOSE: "Nieuw bericht"
     BUTTON_CONTACTS: "Contactpersonen"
+    BUTTON_NEW_MESSAGE: "Nieuw bericht"
     INBOX_NAME: "Postvak IN"
     SENT_NAME: "Verzonden items"
     DRAFTS_NAME: "Concepten"
@@ -98,6 +102,7 @@ nl_NL:
     BUTTON_BACK: "Terug"
     BUTTON_CLOSE: "Sluiten"
     BUTTON_DELETE: "Verwijderen"
+    BUTTON_UNSUBSCRIBE: "Abonnement op deze e-mail lijst opzeggen"
     BUTTON_ARCHIVE: "Archiveren"
     BUTTON_SPAM: "Ongewenste e-mail"
     BUTTON_NOT_SPAM: "Geen ongewenste e-mail"
@@ -140,6 +145,7 @@ nl_NL:
     PRINT_LABEL_ATTACHMENTS: "Bijlagen"
     MESSAGE_LOADING: "Bericht ophalen"
     MESSAGE_VIEW_DESC: "Selecteer een bericht in de lijst om hier te bekijken"
+    MESSAGE_VIEW_MOVE_DESC: "Klik op de doel map in het linker paneel."
     PGP_PASSWORD_INPUT_PLACEHOLDER: "Wachtwoord"
     PGP_SIGNED_MESSAGE_DESC: "OpenPGP ondertekend bericht (klik om te verifiëren)"
     PGP_ENCRYPTED_MESSAGE_DESC: "OpenPGP versleuteld bericht (klik om te ontsleutelen)"
@@ -149,10 +155,10 @@ nl_NL:
   READ_RECEIPT:
     SUBJECT: "Ontvangstbevestiging (weergegeven) - %SUBJECT%"
     BODY: |
-      Dit is een bevestiging dat uw bericht aan %READ-RECEIPT% is ontvangen.
+        Dit is een bevestiging dat uw bericht aan %READ-RECEIPT% is ontvangen.
 
-      Let op: Deze ontvangstbevestiging bevestigd slechts dat uw bericht was weergegeven op het scherm van de ontvanger.
-      Er is geen enkele garantie dat uw bericht is gelezen of begrepen.
+        Let op: Deze ontvangstbevestiging bevestigd slechts dat uw bericht was weergegeven op het scherm van de ontvanger.
+        Er is geen enkele garantie dat uw bericht is gelezen of begrepen.
   SUGGESTIONS:
     SEARCHING_DESC: "Zoeken..."
   CONTACTS:
@@ -299,7 +305,7 @@ nl_NL:
     BUTTON_SIGN_AND_ENCRYPT: "Ondertekenen en versleutelen"
   POPUPS_MESSAGE_OPEN_PGP:
     TITLE_MESSAGE_OPEN_PGP: "OpenPGP Decrypt"
-    LABEL_KEY: "Private Key"
+    LABEL_KEY: "Privé sleutel"
     LABEL_PASSWORD: "Password"
     BUTTON_DECRYPT: "Decrypt"
   POPUPS_TWO_FACTOR_TEST:
@@ -359,15 +365,15 @@ nl_NL:
     BUTTON_CANCEL: "Annuleer"
     BUTTON_CLOSE: "Sluiten"
     NOTIFICATION_SENT: |
-      U heeft nog geen "Verzonden items" folder aangeduid waar de berichten geplaatst worden na het versturen.
-      Indien u geen verzonden berichten wilt bewaren, kies de "Niet gebruiken" optie.
+        U heeft nog geen "Verzonden items" folder aangeduid waar de berichten geplaatst worden na het versturen.
+        Indien u geen verzonden berichten wilt bewaren, kies de "Niet gebruiken" optie.
     NOTIFICATION_DRAFTS: "U heeft nog geen \"Concepten\" folder aangeduid waar de berichten bewaard worden tijdens het opstellen."
     NOTIFICATION_SPAM: |
-      U heeft nog geen "Ongewenste e-mail" folder aangeduid waar de spam berichten geplaatst worden.
-      Indien u berichten permanent wilt verwijderen, kies de "Niet gebruiken" optie.
+        U heeft nog geen "Ongewenste e-mail" folder aangeduid waar de spam berichten geplaatst worden.
+        Indien u berichten permanent wilt verwijderen, kies de "Niet gebruiken" optie.
     NOTIFICATION_TRASH: |
-      U heeft nog geen "Verwijderde items" folder aangeduid waar de verwijderde berichten geplaatst worden.
-      Indien u berichten permanent wilt verwijderen, kies de "Niet gebruiken" optie.
+        U heeft nog geen "Verwijderde items" folder aangeduid waar de verwijderde berichten geplaatst worden.
+        Indien u berichten permanent wilt verwijderen, kies de "Niet gebruiken" optie.
     NOTIFICATION_ARCHIVE: "U heeft nog geen \"Archief\" map aangeduid waar de gearchiveerde berichten geplaatst worden."
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "2-Stap verificatie"
@@ -389,13 +395,13 @@ nl_NL:
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Geconfigureerd"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Niet geconfigureerd"
     TWO_FACTOR_SECRET_DESC: >-
-      Importeer deze informatie in uw Google Authenticator-client (of andere TOTP-client)
-      door gebruik te maken van de QR code hier beneden of door de code handmatig
-      in te voeren.
+        Importeer deze informatie in uw Google Authenticator-client (of andere TOTP-client)
+        door gebruik te maken van de QR code hier beneden of door de code handmatig
+        in te voeren.
     TWO_FACTOR_BACKUP_CODES_DESC: >-
-      Als u geen codes ontvangt via de Google Authenticator kunt u de backup codes
-      gebruiken om in te loggen. Na gebruik van de backup code wordt deze inactief.
-    TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "U kunt deze instelling niet wijzigen voor het testen."
+        Als u geen codes ontvangt via de Google Authenticator kunt u de backup codes
+        gebruiken om in te loggen. Na gebruik van de backup code wordt deze inactief.
+    TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "U kunt 2-stap verificatie niet activeren voordat u het succesvol getest heeft."
   TITLES:
     LOADING: "Ophalen..."
     LOGIN: "Inloggen"
@@ -411,7 +417,7 @@ nl_NL:
     ERROR_FILE_TYPE: "Onjuist bestandstype"
     ERROR_UNKNOWN: "Er is een onbekende fout opgetreden"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Platte tekst"
+    TEXT_SWITCHER_PLAINT_TEXT: "HTML <-> TEKST"
     TEXT_SWITCHER_RICH_FORMATTING: "Tekst met opmaak"
     TEXT_SWITCHER_CONFIRM: "Tekst opmaak zal verloren gaan. Wenst u verder te gaan?"
   SETTINGS_LABELS:
@@ -454,14 +460,15 @@ nl_NL:
     LABEL_ADD_SIGNATURE_TO_ALL: "Handtekening standaard toevoegen aan bericht"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Beveiliging"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Configurate 2-Step verification"
+    LABEL_CONFIGURE_TWO_FACTOR: "Configureer 2-stap verificatie"
     LABEL_AUTOLOGOUT: "Automatisch uitloggen"
     AUTOLOGIN_NEVER_OPTION_NAME: "Nooit"
     AUTOLOGIN_MINUTES_OPTION_NAME: "%MINUTES% minuten"
+    AUTOLOGIN_HOURS_OPTION_NAME: "%HOURS% uur"
   SETTINGS_GENERAL:
     LEGEND_GENERAL: "Algemeen"
     LABEL_LANGUAGE: "Taal"
-    LABEL_IDENTITY: "Identity"
+    LABEL_IDENTITY: "Identiteit"
     LABEL_LAYOUT: "Indeling"
     LABEL_LAYOUT_NO_SPLIT: "Geen splitsing"
     LABEL_LAYOUT_VERTICAL_SPLIT: "Verticale splitsing"
@@ -523,7 +530,7 @@ nl_NL:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Mappen lijst"
     BUTTON_CREATE: "Maak een map"
-    BUTTON_SYSTEM: "Selecteer systeem mappen"
+    BUTTON_SYSTEM: "Systeem mappen"
     BUTTON_DELETE: "Verwijder"
     BUTTON_SUBSCRIBE: "Abonneer"
     BUTTON_UNSUBSCRIBE: "Abonnement opzeggen"
@@ -617,9 +624,10 @@ nl_NL:
   PGP_NOTIFICATIONS:
     NO_PUBLIC_KEYS_FOUND: "Geen publieke sleutels gevonden"
     NO_PUBLIC_KEYS_FOUND_FOR: "Geen publieke sleutels gevonden voor e-mail adres \"%EMAIL%\""
-    NO_PRIVATE_KEY_FOUND: "Geen geheime sleutel gevonden"
-    NO_PRIVATE_KEY_FOUND_FOR: "Geen geheime sleutel gevonden voor e-mail adres \"%EMAIL%\""
+    NO_PRIVATE_KEY_FOUND: "Geen privé sleutel gevonden"
+    NO_PRIVATE_KEY_FOUND_FOR: "Geen privé sleutel gevonden voor e-mail adres \"%EMAIL%\""
     ADD_A_PUBLICK_KEY: "Voeg een publieke sleutel toe"
+    SELECT_A_PRIVATE_KEY: "Selecteer een privé sleutel"
     UNVERIFIRED_SIGNATURE: "Ongeverifieerde handtekening"
     DECRYPTION_ERROR: "OpenPGP decryptie fout"
     GOOD_SIGNATURE: "Juiste handtekening van %USER%"
@@ -633,14 +641,17 @@ nl_NL:
     CONNECTION_ERROR: "Kan geen verbinding maken met de Server"
     CAPTCHA_ERROR: "Onjuiste CAPTCHA"
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >
-      Deze social ID is nog niet aan een e-mail account gekoppeld. Log in met e-mail
-      adres en wachtwoord en schakel deze functie in in het account instellingen menu.
+        Deze social ID is nog niet aan een e-mail account gekoppeld. Log in met e-mail
+        adres en wachtwoord en schakel deze functie in in het account instellingen
+        menu.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >
-      Deze social ID is nog niet aan een e-mail account gekoppeld. Log in met e-mail
-      adres en wachtwoord en schakel deze functie in in het account instellingen menu.
+        Deze social ID is nog niet aan een e-mail account gekoppeld. Log in met e-mail
+        adres en wachtwoord en schakel deze functie in in het account instellingen
+        menu.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >
-      Deze social ID is nog niet aan een e-mail account gekoppeld. Log in met e-mail
-      adres en wachtwoord en schakel deze functie in in het account instellingen menu.
+        Deze social ID is nog niet aan een e-mail account gekoppeld. Log in met e-mail
+        adres en wachtwoord en schakel deze functie in in het account instellingen
+        menu.
     DOMAIN_NOT_ALLOWED: "Domein is niet toegestaan"
     ACCOUNT_NOT_ALLOWED: "Account is niet toegestaan"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "2-Stap verificatie vereist"
@@ -691,13 +702,13 @@ nl_NL:
     PHP_VERSION_ERROR_DESC: "Uw PHP versie (%VERSION%) is lager dan de minimaal vereiste 5.3.0!"
     NO_SCRIPT_TITLE: "JavaScript is benodigd voor deze applicatie"
     NO_SCRIPT_DESC: |
-      JavaScript ondersteuning is niet beschikbaar in uw browser.
-      Gelieve Javascript in te schakelen en opnieuw te proberen.
+        JavaScript ondersteuning is niet beschikbaar in uw browser.
+        Gelieve Javascript in te schakelen en opnieuw te proberen.
     NO_COOKIE_TITLE: "Cookies ondersteuning is nodig voor deze applicatie"
     NO_COOKIE_DESC: |
-      Cookies ondersteuning is niet beschikbaar in uw browser.
-      Gelieve Cookies in te schakelen en opnieuw te proberen.
+        Cookies ondersteuning is niet beschikbaar in uw browser.
+        Gelieve Cookies in te schakelen en opnieuw te proberen.
     BAD_BROWSER_TITLE: "Uw browser is verouderd"
     BAD_BROWSER_DESC: |
-      Om alle functies van deze applicatie te gebruiken,
-      download en installeer een van de volgende browsers:
+        Om alle functies van deze applicatie te gebruiken,
+        download en installeer een van de volgende browsers:

@@ -153,9 +153,9 @@ cs_CZ:
   READ_RECEIPT:
     SUBJECT: "Potvrzení o zobrazení zprávy - %SUBJECT%"
     BODY: |
-      Toto je potrvzení o zaslání emailu na adresu %READ-RECEIPT%.
+        Toto je potrvzení o zaslání emailu na adresu %READ-RECEIPT%.
 
-      Poznámka: Toto potvrzení zajištujě, že zpráva byla zobrazena v poštovní schrnánce příjemce. Nezajišťuje, že ji příjemce čelt a rozuměl jí.
+        Poznámka: Toto potvrzení zajištujě, že zpráva byla zobrazena v poštovní schrnánce příjemce. Nezajišťuje, že ji příjemce čelt a rozuměl jí.
   SUGGESTIONS:
     SEARCHING_DESC: "Hledám..."
   CONTACTS:
@@ -362,15 +362,15 @@ cs_CZ:
     BUTTON_CANCEL: "Zrušit"
     BUTTON_CLOSE: "Zavřít"
     NOTIFICATION_SENT: |
-      Nevybrali jste systémovou složku "Odeslané" kam budou uložené zprávy po jejich odeslání.
-      Pokud nechcete ukládat odeslané zprávy, vyberete možnost "Nepoužívat".
+        Nevybrali jste systémovou složku "Odeslané" kam budou uložené zprávy po jejich odeslání.
+        Pokud nechcete ukládat odeslané zprávy, vyberete možnost "Nepoužívat".
     NOTIFICATION_DRAFTS: "Nevybrali jste systémovou složku pro \"Koncepty\" kam jsou ukládány zprávy během jejich psaní."
     NOTIFICATION_SPAM: |
-      Nevybrali jste systémovou složku pro "Spam" kam je ukládána nevyžádaná pošta.
-      Pokud chcete tyto zprávy odstranit natrvalo, vyberte prosím možnost "Nepoužívat".
+        Nevybrali jste systémovou složku pro "Spam" kam je ukládána nevyžádaná pošta.
+        Pokud chcete tyto zprávy odstranit natrvalo, vyberte prosím možnost "Nepoužívat".
     NOTIFICATION_TRASH: |
-      Nevybrali jste systémovou složku pro "Koš" kam jsou zprávy přesunuté pro jejich odstranění.
-      Pokud chcete zprávy odstranit natrvalo, vyberte prosím možnost "Nepoužívat".
+        Nevybrali jste systémovou složku pro "Koš" kam jsou zprávy přesunuté pro jejich odstranění.
+        Pokud chcete zprávy odstranit natrvalo, vyberte prosím možnost "Nepoužívat".
     NOTIFICATION_ARCHIVE: "Nevybrali jste systémovou složku \"Archiv\", kam se ukládají archivované zprávy."
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "Dvoufázové ověření"
@@ -392,11 +392,11 @@ cs_CZ:
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Nastaveno"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Nenastaveno"
     TWO_FACTOR_SECRET_DESC: >-
-      Import this info into your Google Authenticator client (or other TOTP client)
-      using the provided QR code below or by entering the code manually.
+        Import this info into your Google Authenticator client (or other TOTP client)
+        using the provided QR code below or by entering the code manually.
     TWO_FACTOR_BACKUP_CODES_DESC: >-
-      If you can't receive codes via Google Authenticator, you can use backup codes
-      to sign in. After you’ve used a backup code to sign in, it will become inactive.
+        If you can't receive codes via Google Authenticator, you can use backup codes
+        to sign in. After you’ve used a backup code to sign in, it will become inactive.
     TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "You can't change this setting before test."
   TITLES:
     LOADING: "Načítám"
@@ -413,7 +413,6 @@ cs_CZ:
     ERROR_FILE_TYPE: "Nesprávny typ souboru"
     ERROR_UNKNOWN: "Nastala neznámá chyba při nahrávaní"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Neformátovaný text"
     TEXT_SWITCHER_RICH_FORMATTING: "Formátovaný text"
     TEXT_SWITCHER_CONFIRM: "Formátování textu a obrázky budou odstraněné. Chcete pokračovat?"
   SETTINGS_LABELS:
@@ -456,7 +455,7 @@ cs_CZ:
     LABEL_ADD_SIGNATURE_TO_ALL: "Připojit podpis ke všem odchozím zprávám"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Zapezpečení"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Nastavení dvoufázového ověření"
+    LABEL_CONFIGURE_TWO_FACTOR: "Nastavení dvoufázového ověření"
     LABEL_AUTOLOGOUT: "Automatické odhlášení"
     AUTOLOGIN_NEVER_OPTION_NAME: "Nikdy"
     AUTOLOGIN_MINUTES_OPTION_NAME: "%MINUTES% minut"
@@ -525,7 +524,6 @@ cs_CZ:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Seznam složek"
     BUTTON_CREATE: "Vytvořit složku"
-    BUTTON_SYSTEM: "Spravovat systémové složky"
     BUTTON_DELETE: "Odstranit"
     BUTTON_SUBSCRIBE: "Přihlásit se"
     BUTTON_UNSUBSCRIBE: "Odhlásit se"
@@ -636,14 +634,14 @@ cs_CZ:
     CONNECTION_ERROR: "Nepodařilo se připojit k serveru"
     CAPTCHA_ERROR: "Nesprávná CAPTCHA."
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >-
-      Toto ID není přiřazeno k žádnému účtu. Přihlašte se pomocí vaší emailové adresy
-      a nastavte si tuto možnost.
+        Toto ID není přiřazeno k žádnému účtu. Přihlašte se pomocí vaší emailové adresy
+        a nastavte si tuto možnost.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >-
-      Toto ID není přiřazeno k žádnému účtu. Přihlašte se pomocí vaší emailové adresy
-      a nastavte si tuto možnost.
+        Toto ID není přiřazeno k žádnému účtu. Přihlašte se pomocí vaší emailové adresy
+        a nastavte si tuto možnost.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >-
-      Toto ID není přiřazeno k žádnému účtu. Přihlašte se pomocí vaší emailové adresy
-      a nastavte si tuto možnost.
+        Toto ID není přiřazeno k žádnému účtu. Přihlašte se pomocí vaší emailové adresy
+        a nastavte si tuto možnost.
     DOMAIN_NOT_ALLOWED: "Doména není povolená"
     ACCOUNT_NOT_ALLOWED: "Účet není povolený"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "Je vyžadováno dvoufázové ověření"
@@ -694,13 +692,13 @@ cs_CZ:
     PHP_VERSION_ERROR_DESC: "Vaše verze PHP (%VERSION%) je nižší než požadovaná 5.3.0!"
     NO_SCRIPT_TITLE: "Tato aplikace vyžaduje JavaScript."
     NO_SCRIPT_DESC: |
-      Váš internetový prohlížeč nepodporuje JavaScript.
-      Prosím povolte podporu JavaScriptu v nastavení vašeho internetového prohlížeče a zkuste to znovu.
+        Váš internetový prohlížeč nepodporuje JavaScript.
+        Prosím povolte podporu JavaScriptu v nastavení vašeho internetového prohlížeče a zkuste to znovu.
     NO_COOKIE_TITLE: "Tato aplikace vyžaduje podporu Cookies."
     NO_COOKIE_DESC: |
-      Váš internetový prohlížeč nepodporuje Cookies.
-      Prosím povolte podporu Cookies v nastavení vašeho internetového prohlížeče a zkuste to znovu.
+        Váš internetový prohlížeč nepodporuje Cookies.
+        Prosím povolte podporu Cookies v nastavení vašeho internetového prohlížeče a zkuste to znovu.
     BAD_BROWSER_TITLE: "Používáte zastaralý internetový prohlížeč."
     BAD_BROWSER_DESC: |
-      Abyste mohli využívat všechny funkcie této aplikace,
-      použijte některý z následujících internetových prohlížečů:
+        Abyste mohli využívat všechny funkcie této aplikace,
+        použijte některý z následujících internetových prohlížečů:

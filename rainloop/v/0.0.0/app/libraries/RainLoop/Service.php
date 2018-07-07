@@ -156,21 +156,26 @@ class Service
 
 		if ($this->oActions->Config()->Get('labs', 'allow_mobile_version', false))
 		{
+			$bUseMobileVersionForTablets = $this->oActions->Config()->Get('labs', 'use_mobile_version_for_tablets', false);
+
 			$oMobileDetect = new \Detection\MobileDetect();
-			$bMobileDevice = $oMobileDetect->isMobile() && !$oMobileDetect->isTablet();
+			$bMobileDevice = $oMobileDetect->isMobile() &&
+				($bUseMobileVersionForTablets ? true : !$oMobileDetect->isTablet());
 
-			$bMobile = (0 < \count($aPaths) && !empty($aPaths[0]) && 'mobile' === \strtolower($aPaths[0]));
-		}
-
-		if ($bIndex && !$bMobile)
-		{
-			$iMobileKey = (int) \RainLoop\Utils::GetCookie(\RainLoop\Actions::RL_SKIP_MOBILE_KEY, 0);
-			if (1 !== $iMobileKey)
+			if ($bIndex)
 			{
-				if ($bMobileDevice)
-				{
-					$this->oActions->Location('./?/Mobile/');
-					return $this;
+				$sMobileType = (string) \RainLoop\Utils::GetCookie(\RainLoop\Actions::RL_MOBILE_TYPE, '');
+				switch ($sMobileType) {
+					default:
+						$sMobileType = '';
+						$bMobile = $bMobileDevice;
+						break;
+					case 'mobile':
+						$bMobile = true;
+						break;
+					case 'desktop':
+						$bMobile = false;
+						break;
 				}
 			}
 		}
@@ -238,7 +243,7 @@ class Service
 
 			if (\RainLoop\Utils::IsOwnCloud())
 			{
-				$sResult .= '][owncloud:true';
+				$sResult .= '][cloud:true';
 			}
 
 			$sResult .= ']-->';
@@ -291,11 +296,12 @@ class Service
 			'{{BaseAppFaviconTouchLinkTag}}' => $sAppleTouchLink ? '<link type="image/png" rel="apple-touch-icon" href="'.$sAppleTouchLink.'" />' : '',
 			'{{BaseAppMainCssLink}}' => $this->staticPath('css/app'.($bAppCssDebug ? '' : '.min').'.css'),
 			'{{BaseAppThemeCssLink}}' => $this->oActions->ThemeLink($sTheme, $bAdmin),
-			'{{BaseAppBootScriptLink}}' => $this->staticPath('js/'.($bAppJsDebug ? '' : 'min/').'boot.js'),
+			'{{BaseAppBootScriptLink}}' => $this->staticPath('js/'.($bAppJsDebug ? '' : 'min/').'boot'.($bAppJsDebug ? '' : '.min').'.js'),
 			'{{BaseViewport}}' => $bMobile ? 'width=device-width,initial-scale=1,user-scalable=no' : 'width=950,maximum-scale=2',
 			'{{BaseContentSecurityPolicy}}' => $sContentSecurityPolicy ?
 				'<meta http-equiv="Content-Security-Policy" content="'.$sContentSecurityPolicy.'" />' : '',
-			'{{BaseDir}}' => false && \in_array($sLanguage, array('ar', 'he', 'ur')) ? 'rtl' : 'ltr'
+			'{{BaseDir}}' => false && \in_array($sLanguage, array('ar', 'he', 'ur')) ? 'rtl' : 'ltr',
+			'{{BaseAppManifestLink}}' => $this->staticPath('manifest.json')
 		);
 
 		$aTemplateParameters['{{RainloopBootData}}'] = \json_encode(array(

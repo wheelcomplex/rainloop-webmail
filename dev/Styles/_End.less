@@ -88,3 +88,25 @@ svg-icon {
 .lg-backdrop.in {
 	opacity: 0.8;
 }
+
+
+.btn .btn-text {
+	padding-left: 8px;
+}
+
+.active-scale-transition {
+	transition: transform .2s;
+	&:active {
+		transform: scale(.95);
+	}
+}
+
+html.glass {
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		-webkit-transition-delay: 9999s;
+		-webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+	}
+}

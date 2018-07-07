@@ -1,110 +1,87 @@
 
-(function () {
+import ko from 'ko';
 
-	'use strict';
+import {isNonEmptyArray, log} from 'Common/Utils';
 
-	var
-		_ = require('_'),
-		ko = require('ko'),
+import {AbstractModel} from 'Knoin/AbstractModel';
 
-		Utils = require('Common/Utils'),
+import PgpStore from 'Stores/User/Pgp';
 
-		PgpStore = require('Stores/User/Pgp'),
-
-		AbstractModel = require('Knoin/AbstractModel')
-	;
-
+class OpenPgpKeyModel extends AbstractModel
+{
 	/**
-	 * @param {string} iIndex
-	 * @param {string} sGuID
-	 * @param {string} sID
-	 * @param {array} aIDs
-	 * @param {array} aUserIDs
-	 * @param {array} aEmails
-	 * @param {boolean} bIsPrivate
-	 * @param {string} sArmor
-	 * @param {string} sUserID
-	 * @constructor
+	 * @param {string} index
+	 * @param {string} guID
+	 * @param {string} ID
+	 * @param {array} IDs
+	 * @param {array} userIDs
+	 * @param {array} emails
+	 * @param {boolean} isPrivate
+	 * @param {string} armor
+	 * @param {string} userID
 	 */
-	function OpenPgpKeyModel(iIndex, sGuID, sID, aIDs, aUserIDs, aEmails, bIsPrivate, sArmor, sUserID)
+	constructor(index, guID, ID, IDs, userIDs, emails, isPrivate, armor, userID)
 	{
-		AbstractModel.call(this, 'OpenPgpKeyModel');
+		super('OpenPgpKeyModel');
 
-		this.index = iIndex;
-		this.id = sID;
-		this.ids = Utils.isNonEmptyArray(aIDs) ? aIDs : [sID];
-		this.guid = sGuID;
-		this.users = aUserIDs;
-		this.emails = aEmails;
-		this.armor = sArmor;
-		this.isPrivate = !!bIsPrivate;
+		this.index = index;
+		this.id = ID;
+		this.ids = isNonEmptyArray(IDs) ? IDs : [ID];
+		this.guid = guID;
+		this.user = '';
+		this.users = userIDs;
+		this.email = '';
+		this.emails = emails;
+		this.armor = armor;
+		this.isPrivate = !!isPrivate;
 
-		this.selectUser(sUserID);
+		this.selectUser(userID);
 
 		this.deleteAccess = ko.observable(false);
 	}
 
-	_.extend(OpenPgpKeyModel.prototype, AbstractModel.prototype);
-
-	OpenPgpKeyModel.prototype.index = 0;
-	OpenPgpKeyModel.prototype.id = '';
-	OpenPgpKeyModel.prototype.ids = [];
-	OpenPgpKeyModel.prototype.guid = '';
-	OpenPgpKeyModel.prototype.user = '';
-	OpenPgpKeyModel.prototype.users = [];
-	OpenPgpKeyModel.prototype.email = '';
-	OpenPgpKeyModel.prototype.emails = [];
-	OpenPgpKeyModel.prototype.armor = '';
-	OpenPgpKeyModel.prototype.isPrivate = false;
-
-	OpenPgpKeyModel.prototype.getNativeKey = function ()
-	{
-		var oKey = null;
+	getNativeKey() {
+		let key = null;
 		try
 		{
-			oKey = PgpStore.openpgp.key.readArmored(this.armor);
-			if (oKey && !oKey.err && oKey.keys && oKey.keys[0])
+			key = PgpStore.openpgp.key.readArmored(this.armor);
+			if (key && !key.err && key.keys && key.keys[0])
 			{
-				return oKey;
+				return key;
 			}
 		}
 		catch (e)
 		{
-			Utils.log(e);
+			log(e);
 		}
 
 		return null;
-	};
+	}
 
-	OpenPgpKeyModel.prototype.getNativeKeys = function ()
-	{
-		var oKey = this.getNativeKey();
-		return oKey && oKey.keys ? oKey.keys : null;
-	};
+	getNativeKeys() {
+		const key = this.getNativeKey();
+		return key && key.keys ? key.keys : null;
+	}
 
-	OpenPgpKeyModel.prototype.select = function (sPattern, sProperty)
-	{
-		if (this[sProperty])
+	select(pattern, property) {
+		if (this[property])
 		{
-			var index = this[sProperty].indexOf(sPattern);
-			if (index !== -1)
+			const index = this[property].indexOf(pattern);
+			if (-1 !== index)
 			{
 				this.user = this.users[index];
 				this.email = this.emails[index];
 			}
 		}
-	};
+	}
 
-	OpenPgpKeyModel.prototype.selectUser = function (sUser)
-	{
-		this.select(sUser, 'users');
-	};
+	selectUser(user) {
+		this.select(user, 'users');
+	}
 
-	OpenPgpKeyModel.prototype.selectEmail = function (sEmail)
-	{
-		this.select(sEmail, 'emails');
-	};
+	selectEmail(email) {
+		this.select(email, 'emails');
+	}
+}
 
-	module.exports = OpenPgpKeyModel;
-
-}());
+export {OpenPgpKeyModel, OpenPgpKeyModel as default};

@@ -1,5 +1,5 @@
 ﻿/**
- * @license Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
@@ -13,10 +13,10 @@
  * (1) http://ckeditor.com/builder
  *     Visit online builder to build CKEditor from scratch.
  *
- * (2) http://ckeditor.com/builder/05718fb4520c12f746e349774d0ef00f
+ * (2) http://ckeditor.com/builder/9b9471acfb896c4f73b825ccf971b5bc
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
- * (3) http://ckeditor.com/builder/download/05718fb4520c12f746e349774d0ef00f
+ * (3) http://ckeditor.com/builder/download/9b9471acfb896c4f73b825ccf971b5bc
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -25,7 +25,7 @@
  */
 
 var CKBUILDER_CONFIG = {
-	skin: 'icy_orange',
+	skin: 'moono-lisa',
 	preset: 'basic',
 	ignore: [
 		'.bender',
@@ -58,6 +58,7 @@ var CKBUILDER_CONFIG = {
 		'blockquote' : 1,
 		'clipboard' : 1,
 		'colorbutton' : 1,
+		'colordialog' : 1,
 		'divarea' : 1,
 		'enterkey' : 1,
 		'entities' : 1,
@@ -73,7 +74,6 @@ var CKBUILDER_CONFIG = {
 		'quicktable' : 1,
 		'removeformat' : 1,
 		'sourcearea' : 1,
-		'table' : 1,
 		'toolbar' : 1,
 		'undo' : 1,
 		'wysiwygarea' : 1
@@ -81,6 +81,7 @@ var CKBUILDER_CONFIG = {
 	languages : {
 		'af' : 1,
 		'ar' : 1,
+		'az' : 1,
 		'bg' : 1,
 		'bn' : 1,
 		'bs' : 1,
@@ -89,6 +90,7 @@ var CKBUILDER_CONFIG = {
 		'cy' : 1,
 		'da' : 1,
 		'de' : 1,
+		'de-ch' : 1,
 		'el' : 1,
 		'en' : 1,
 		'en-au' : 1,
@@ -125,6 +127,7 @@ var CKBUILDER_CONFIG = {
 		'nb' : 1,
 		'nl' : 1,
 		'no' : 1,
+		'oc' : 1,
 		'pl' : 1,
 		'pt' : 1,
 		'pt-br' : 1,

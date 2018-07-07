@@ -5,25 +5,28 @@ tr_TR:
     LABEL_PASSWORD: "Şifre"
     LABEL_SIGN_ME: "Beni Hatırla"
     LABEL_VERIFICATION_CODE: "Doğrulama Kodu"
-    LABEL_DONT_ASK_VERIFICATION_CODE: "2 hafta kodu sormayın"
+    LABEL_DONT_ASK_VERIFICATION_CODE: "2 hafta boyunca kodu sormayın"
     BUTTON_SIGN_IN: "Giriş Yap"
     TITLE_SIGN_IN_GOOGLE: "Google İle Giriş Yap"
     TITLE_SIGN_IN_FACEBOOK: "Facebook ile Giriş yap"
     TITLE_SIGN_IN_TWITTER: "Twitter İle Giriş Yap"
-    LABEL_FORGOT_PASSWORD: "Forgot password"
+    LABEL_FORGOT_PASSWORD: "Şifremi Unuttum"
     LABEL_REGISTRATION: "Registration"
   TOP_TOOLBAR:
     BUTTON_ADD_ACCOUNT: "Hesap Ekle"
     BUTTON_SETTINGS: "Ayarlar"
     BUTTON_HELP: "Yardım"
     BUTTON_LOGOUT: "Çıkış"
+  MOBILE:
+    BUTTON_MOBILE_VERSION: "Mobil versiyonu"
+    BUTTON_DESKTOP_VERSION: "Masaüstü versiyonu"
   SEARCH:
     MAIN_INPUT_PLACEHOLDER: "Arama"
     TITLE_ADV: "Detaylı Arama"
     LABEL_ADV_FROM: "Kimden"
     LABEL_ADV_TO: "Kime"
     LABEL_ADV_SUBJECT: "Konu"
-    LABEL_ADV_TEXT: "Text"
+    LABEL_ADV_TEXT: "Metin"
     LABEL_ADV_HAS_ATTACHMENT: "Eki"
     LABEL_ADV_HAS_ATTACHMENTS: "Ekleri"
     LABEL_ADV_FLAGGED: "İşaretli"
@@ -39,7 +42,7 @@ tr_TR:
     BUTTON_ADV_SEARCH: "Arama"
   PREVIEW_POPUP:
     FULLSCREEN: "Toggle fullscreen"
-    ZOOM: "Zoom in/out"
+    ZOOM: "Yakınlaştır/Uzaklaştır"
     CLOSE: "Kapat (Esc)"
     LOADING: "Yükleniyor..."
     GALLERY_PREV: "Önceki (Sol yön tuşu)"
@@ -50,6 +53,7 @@ tr_TR:
   FOLDER_LIST:
     BUTTON_COMPOSE: "Yaz"
     BUTTON_CONTACTS: "Kişi Listesi"
+    BUTTON_NEW_MESSAGE: "Yeni Mesaj"
     INBOX_NAME: "Gelen Kutusu"
     SENT_NAME: "Gönderilen"
     DRAFTS_NAME: "Taslaklar"
@@ -84,7 +88,7 @@ tr_TR:
     EMPTY_LIST: "Herhangi Bir Sonuç Bulunamadı."
     EMPTY_SEARCH_LIST: "Arama sonuçlarına uyan herhangi bir mesaj bulunamadı."
     SEARCH_RESULT_FOR: "\"%SEARCH%\" için arama sonuçları"
-    BACK_TO_MESSAGE_LIST: "back to message list"
+    BACK_TO_MESSAGE_LIST: "mesaj listesine geri dön"
     LIST_LOADING: "Yükleniyor"
     EMPTY_SUBJECT_TEXT: "(Konu Yok)"
     PUT_MESSAGE_HERE: "Listede görüntülemek istediğiniz mesajı buraya sürükleyin."
@@ -98,6 +102,7 @@ tr_TR:
     BUTTON_BACK: "Geri"
     BUTTON_CLOSE: "Kapat"
     BUTTON_DELETE: "Sil"
+    BUTTON_UNSUBSCRIBE: "Bu listeden aboneliği sonlandir"
     BUTTON_ARCHIVE: "Arşiv"
     BUTTON_SPAM: "Spam"
     BUTTON_NOT_SPAM: "Spam Değil"
@@ -112,8 +117,8 @@ tr_TR:
     BUTTON_NOTIFY_READ_RECEIPT: "Gönderen, bu mesaj için okundu onayı istedi."
     BUTTON_IN_NEW_WINDOW: "Ayrı bir pencerede görüntüle"
     BUTTON_THREAD_LIST: "Thread list"
-    BUTTON_THREAD_PREV: "Previous"
-    BUTTON_THREAD_NEXT: "Next"
+    BUTTON_THREAD_PREV: "Önceki"
+    BUTTON_THREAD_NEXT: "Sonraki"
     BUTTON_THREAD_MORE: "More messages"
     MENU_HEADERS: "İleti başlıklarını göster"
     MENU_VIEW_ORIGINAL: "Kaynağı görüntüle"
@@ -145,14 +150,14 @@ tr_TR:
     PGP_ENCRYPTED_MESSAGE_DESC: "OpenPGP şifreli mesaj (çözmek için tıklayın)"
     LINK_DOWNLOAD_AS_ZIP: "Download as zip"
     LINK_SAVE_TO_OWNCLOUD: "Save to ownCloud"
-    LINK_SAVE_TO_DROPBOX: "Save to Dropbox"
+    LINK_SAVE_TO_DROPBOX: "Dropbox'a Kaydet"
   READ_RECEIPT:
     SUBJECT: "Return Receipt (displayed) - %SUBJECT%"
     BODY: |
-      This is a Return Receipt for the mail that you sent to %READ-RECEIPT%.
+        This is a Return Receipt for the mail that you sent to %READ-RECEIPT%.
 
-      Note: This Return Receipt only acknowledges that the message was displayed on the recipient's computer.
-      There is no guarantee that the recipient has read or understood the message contents.
+        Note: This Return Receipt only acknowledges that the message was displayed on the recipient's computer.
+        There is no guarantee that the recipient has read or understood the message contents.
   SUGGESTIONS:
     SEARCHING_DESC: "Aranıyor..."
   CONTACTS:
@@ -337,13 +342,13 @@ tr_TR:
     SELECT_TYPE_UNDER: "Under"
     SELECT_MATCH_ANY: "Matching any of the following rules"
     SELECT_MATCH_ALL: "Matching all of the following rules"
-    MARK_AS_READ_LABEL: "Mark as read"
+    MARK_AS_READ_LABEL: "Okundu olarak işaretle"
     REPLY_INTERVAL_LABEL: "Reply interval (days)"
     KEEP_LABEL: "Keep"
     STOP_LABEL: "Don't stop processing rules"
-    EMAIL_LABEL: "Email"
-    VACATION_SUBJECT_LABEL: "Subject (optional)"
-    VACATION_MESSAGE_LABEL: "Message"
+    EMAIL_LABEL: "Eposta"
+    VACATION_SUBJECT_LABEL: "Konu (Opsiyonel)"
+    VACATION_MESSAGE_LABEL: "Mesaj"
     VACATION_RECIPIENTS_LABEL: "Recipients (comma separated)"
     REJECT_MESSAGE_LABEL: "Reject message"
     ALL_INCOMING_MESSAGES_DESC: "All incoming messages"
@@ -354,44 +359,45 @@ tr_TR:
     LABEL_SENT: "Gönderilen"
     LABEL_DRAFTS: "Taslaklar"
     LABEL_SPAM: "Spam"
-    LABEL_TRASH: "Çöğ"
+    LABEL_TRASH: "Çöp"
     LABEL_ARCHIVE: "Arşiv"
     BUTTON_CANCEL: "Vazgeç"
     BUTTON_CLOSE: "Kapat"
     NOTIFICATION_SENT: |
-      Herhangi bir sistem gönderilen klasörü seçmediniz normalde mesaj gönderildikten sonra "Gönderilen"'ler klasörüne kaydedilir
-      Eğer gönderilenlerin kaydedilmesini istemiyorsanız lütfen ayarlardan "Kullanma" seçeneğini seçin.
+        Herhangi bir sistem gönderilen klasörü seçmediniz normalde mesaj gönderildikten sonra "Gönderilen"'ler klasörüne kaydedilir
+        Eğer gönderilenlerin kaydedilmesini istemiyorsanız lütfen ayarlardan "Kullanma" seçeneğini seçin.
     NOTIFICATION_DRAFTS: "Herhangi bir sistem taslak klasörü seçmediniz.\"Taslak\" klasörü otomatik mesajınızı kaydeder"
     NOTIFICATION_SPAM: |-
-      Herhangi bir sistem spam klasörü seçmediniz."Spam" klasörü spam iletileri barındırır.
+        Herhangi bir sistem spam klasörü seçmediniz."Spam" klasörü spam iletileri barındırır.
     NOTIFICATION_TRASH: |-
-      Herhangi bir sistem çöp kutusu klasörü seçmediniz normalde mesaj silindikten sonra "Çöp Kutusu" klasörüne kaydedilir
+        Herhangi bir sistem çöp kutusu klasörü seçmediniz normalde mesaj silindikten sonra "Çöp Kutusu" klasörüne kaydedilir
     NOTIFICATION_ARCHIVE: "Herhangi bir sistem arşiv klasörü seçmediniz."
   POPUPS_TWO_FACTOR_CFG:
     LEGEND_TWO_FACTOR_AUTH: "2-Basamaklı doğrumalama"
     LABEL_ENABLE_TWO_FACTOR: "2-Basamaklı Doğrulama Etkinleştir"
     LABEL_TWO_FACTOR_USER: "Kullanıcı Adı"
     LABEL_TWO_FACTOR_STATUS: "Durum"
-    LABEL_TWO_FACTOR_SECRET: "Secret"
+    LABEL_TWO_FACTOR_SECRET: "Gizli"
     LABEL_TWO_FACTOR_BACKUP_CODES: "Kodları yedekle"
     BUTTON_CREATE: "Yeni Secret kodu oluştur"
     BUTTON_ACTIVATE: "Activate"
     BUTTON_CLEAR: "Temizle"
-    BUTTON_LOGOUT: "Logout"
-    BUTTON_DONE: "Done"
+    BUTTON_LOGOUT: "Oturumu Kapat"
+    BUTTON_DONE: "Tamamla"
     BUTTON_TEST: "Test"
     LINK_TEST: "test"
-    BUTTON_SHOW_SECRET: "Secret kodu göster"
-    BUTTON_HIDE_SECRET: "Secret kodu gizle"
+    BUTTON_SHOW_SECRET: "Gizli kodu göster"
+    BUTTON_HIDE_SECRET: "Gizli kodu gizle"
     TWO_FACTOR_REQUIRE_DESC: "Your account requires 2-Step verification configuration."
     TWO_FACTOR_SECRET_CONFIGURED_DESC: "Yapılandırılmış"
     TWO_FACTOR_SECRET_NOT_CONFIGURED_DESC: "Yapılandırılmamış"
     TWO_FACTOR_SECRET_DESC: >-
-      Aşağıda sunulan QR kodu kullanarak Google Şifrematik istemcisi (veya başka TOTP
-      istemci) içine veya elle kod girerek bu bilgi aktarın.
+        Aşağıda sunulan QR kodu kullanarak Google Şifrematik istemcisi (veya başka
+        TOTP istemci) içine veya elle kod girerek bu bilgi aktarın.
     TWO_FACTOR_BACKUP_CODES_DESC: >-
-      Google Şifrematik'te aracılığıyla kodları alamıyorsa Eğer oturum için bir yedek
-      kod kullandım sonra, bunu pasif olacaktır, oturum yedekleme kodlarını kullanabilirsiniz.
+        Google Şifrematik'te aracılığıyla kodları alamıyorsa Eğer oturum için bir
+        yedek kod kullandım sonra, bunu pasif olacaktır, oturum yedekleme kodlarını
+        kullanabilirsiniz.
     TWO_FACTOR_SECRET_TEST_BEFORE_DESC: "You can't change this setting before test."
   TITLES:
     LOADING: "Yükleniyor"
@@ -408,7 +414,7 @@ tr_TR:
     ERROR_FILE_TYPE: "Geçersiz dosya tipi"
     ERROR_UNKNOWN: "Bilinmeyen bir dosya yükleme bir hatası oluştu"
   EDITOR:
-    TEXT_SWITCHER_PLAINT_TEXT: "Düz Metin"
+    TEXT_SWITCHER_PLAINT_TEXT: "HTML <-> Yazi Formati"
     TEXT_SWITCHER_RICH_FORMATTING: "Zengin yazı formatı"
     TEXT_SWITCHER_CONFIRM: "Metin biçimlendirme ve görüntüleri kaybolacak. Devam etmek istediğinizden emin misiniz?"
   SETTINGS_LABELS:
@@ -429,9 +435,9 @@ tr_TR:
     BUTTON_BACK: "Geri"
   SETTINGS_FILTERS:
     LEGEND_FILTERS: "Filters"
-    BUTTON_SAVE: "Save"
+    BUTTON_SAVE: "Kaydet"
     BUTTON_ADD_FILTER: "Add a Filter"
-    BUTTON_DELETE: "Delete"
+    BUTTON_DELETE: "Sil"
     BUTTON_RAW_SCRIPT: "Use Custom User Script"
     SUBNAME_NONE: "None"
     SUBNAME_MOVE_TO: "Move to \"%FOLDER%\""
@@ -451,10 +457,11 @@ tr_TR:
     LABEL_ADD_SIGNATURE_TO_ALL: "Tüm giden iletilere imza ekle"
   SETTINGS_SECURITY:
     LEGEND_SECURITY: "Security"
-    LABEL_CONFIGURATE_TWO_FACTOR: "Configurate 2-Step verification"
+    LABEL_CONFIGURE_TWO_FACTOR: "2 Aşamali Güvenlik Konfikasyonu"
     LABEL_AUTOLOGOUT: "Auto Logout"
     AUTOLOGIN_NEVER_OPTION_NAME: "Never"
     AUTOLOGIN_MINUTES_OPTION_NAME: "%MINUTES% minute(s)"
+    AUTOLOGIN_HOURS_OPTION_NAME: "%HOURS% saat"
   SETTINGS_GENERAL:
     LEGEND_GENERAL: "Genel"
     LABEL_LANGUAGE: "Dil"
@@ -520,7 +527,7 @@ tr_TR:
   SETTINGS_FOLDERS:
     LEGEND_FOLDERS: "Klasör Listesi"
     BUTTON_CREATE: "Klasör Oluştur"
-    BUTTON_SYSTEM: "Sistem Dosyalarını Seç"
+    BUTTON_SYSTEM: "Sistem Klasörleri"
     BUTTON_DELETE: "Sil"
     BUTTON_SUBSCRIBE: "Abone"
     BUTTON_UNSUBSCRIBE: "Abonelikten Çık"
@@ -617,6 +624,7 @@ tr_TR:
     NO_PRIVATE_KEY_FOUND: "Private key bulunamadı"
     NO_PRIVATE_KEY_FOUND_FOR: "Private key bulunamadı %EMAIL%"
     ADD_A_PUBLICK_KEY: "Add a public key"
+    SELECT_A_PRIVATE_KEY: "Özel anahtari seç"
     UNVERIFIRED_SIGNATURE: "Doğrulanmamış imza"
     DECRYPTION_ERROR: "OpenPGP çözme hatası"
     GOOD_SIGNATURE: "Geçerli imza %USER%"
@@ -630,17 +638,17 @@ tr_TR:
     CONNECTION_ERROR: "Sunucuya bağlanılamadı"
     CAPTCHA_ERROR: "Yanlış Güvenlik Kodu."
     SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE: >-
-      Bu, sosyal kimliği henüz herhangi bir e-posta hesabı için atanmadı.E-kimlik
-      bilgilerini kullanarak oturum ve hesap ayarlarında bu özelliği etkinleştirmek
-      ekleyin.
+        Bu, sosyal kimliği henüz herhangi bir e-posta hesabı için atanmadı.E-kimlik
+        bilgilerini kullanarak oturum ve hesap ayarlarında bu özelliği etkinleştirmek
+        ekleyin.
     SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE: >-
-      Bu, sosyal kimliği henüz herhangi bir e-posta hesabı için atanmadı.E-kimlik
-      bilgilerini kullanarak oturum ve hesap ayarlarında bu özelliği etkinleştirmek
-      ekleyin.
+        Bu, sosyal kimliği henüz herhangi bir e-posta hesabı için atanmadı.E-kimlik
+        bilgilerini kullanarak oturum ve hesap ayarlarında bu özelliği etkinleştirmek
+        ekleyin.
     SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE: >-
-      Bu, sosyal kimliği henüz herhangi bir e-posta hesabı için atanmadı.E-kimlik
-      bilgilerini kullanarak oturum ve hesap ayarlarında bu özelliği etkinleştirmek
-      ekleyin.
+        Bu, sosyal kimliği henüz herhangi bir e-posta hesabı için atanmadı.E-kimlik
+        bilgilerini kullanarak oturum ve hesap ayarlarında bu özelliği etkinleştirmek
+        ekleyin.
     DOMAIN_NOT_ALLOWED: "Alan Adına izin verilmemiş"
     ACCOUNT_NOT_ALLOWED: "Hesaba izin verilmemiş"
     ACCOUNT_TWO_FACTOR_AUTH_REQUIRED: "İki Aşamalı Doğrulama Gerekiyor"
@@ -690,13 +698,13 @@ tr_TR:
     PHP_VERSION_ERROR_DESC: "PHP sürümünüz (%VERSION%) en az php 5.3.0 sürümü gerekli!"
     NO_SCRIPT_TITLE: "JavaScript bu uygulama için gereklidir."
     NO_SCRIPT_DESC: |
-      JavaScript desteği tarayıcınızda mevcut değil.
-      Tarayıcı ayarlarında JavaScript desteğini etkinleştirin ve yeniden deneyin.
+        JavaScript desteği tarayıcınızda mevcut değil.
+        Tarayıcı ayarlarında JavaScript desteğini etkinleştirin ve yeniden deneyin.
     NO_COOKIE_TITLE: "Çerezler desteği bu uygulama için gerekli."
     NO_COOKIE_DESC: |
-      Çerezler destek tarayıcınızda mevcut değil.
-      Tarayıcı ayarlarında Cookie desteği etkinleştirin ve yeniden deneyin.
+        Çerezler destek tarayıcınızda mevcut değil.
+        Tarayıcı ayarlarında Cookie desteği etkinleştirin ve yeniden deneyin.
     BAD_BROWSER_TITLE: "Tarayıcınız çok eski."
     BAD_BROWSER_DESC: |
-      Uygulamanın tüm özelliklerini kullanmak için,
-      Bu tarayıcılardan birini indirmek ve yükleyin:
+        Uygulamanın tüm özelliklerini kullanmak için,
+        Bu tarayıcılardan birini indirmek ve yükleyin:
